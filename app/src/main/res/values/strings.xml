@@ -9,4 +9,21 @@
     <string name="Category">Категории услуг</string>
     <string name="name">Бронирование услуг</string>
     <string name="CRM">СРМ - система и онлайн-запись</string>
+
+    <string name="endRegistration">Завершить регистрацию</string>
+    <string name="confirmPassword">Подтвердите пароль</string>
+    <string name="Password">Пароль</string>
+    <string name="Phone">Телефон</string>
+    <string name="Name_secName">Имя и фамилия</string>
+    <string name="login">Логин</string>
+    <string name="e_mail">Почта</string>
+    <string name="name_Company">Название компании</string>
+    <string name="next">Далее</string>
+    <string name="reg_as_company">Зарегистрироваться как организация</string>
+    <string name="miss_your_password">Забыли свои учетные данные?</string>
+    <string name="help_missing_password">Получить помощь со входом в систему</string>
+    <string name="enter_as_guest">Войти как гость</string>
+    <string name="not_have_account">У вас еще нет аккаунта?</string>
+    <string name="btn_regist">Зарегистрируйтесь</string>
+    <string name="Enter">Войти</string>
 </resources>
