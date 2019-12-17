@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageViewAvatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@color/colorWhite"
+                android:src="@drawable/baseline_account_circle_black_48dp"
+                />
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Гость"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/txtUserPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="guest@mail.com"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+       <!-- <LinearLayout
+            android:id="@+id/followersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout"
+            android:background="#FFFFFF"
+            android:gravity="left"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+        </LinearLayout>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="200dp"
+            android:background="@color/Gray"
+            android:text="   Уведомления"
+            android:textAlignment="inherit"
+            android:textColor="@color/Black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="232dp"
+            android:background="@color/colorWhite"
+            android:text="   Уведомления"
+            android:textAlignment="viewStart"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:textColor="@color/Black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="280dp"
+            android:background="@color/colorWhite"
+            android:text="   Настройка уведомлений"
+            android:textAlignment="viewStart"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:textColor="@color/Black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="630dp"
+            android:background="@color/colorWhite"
+            android:text="   Зарегистрироваться"
+            android:textAlignment="viewStart"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:textColor="@color/Black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="680dp"
+            android:background="@color/colorWhite"
+            android:text="   Войти"
+            android:textAlignment="viewStart"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:textColor="@color/Black" />
+
+    </RelativeLayout>
+
+</ScrollView>
