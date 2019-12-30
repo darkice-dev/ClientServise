@@ -24,7 +24,7 @@ public class HomeFragment extends Fragment {
 
    private Spinner spinner = null;
    private String[] category = {"Категория услуг", "Сантехник", "Парикмахер", "Мастер маникюра", "Юрист", "Репетитор"};
-    private LinearLayout linearLayout;
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -51,10 +51,17 @@ public class HomeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);        //Вот так реализуется спиннер во фрагментах
 
-        ListView listView = view.findViewById(R.id.lv_button);
+        final ListView listView = view.findViewById(R.id.lv_button);
         ListButtonAdapter adapter = new ListButtonAdapter(getActivity(), nameCompany, Address,workTime,Rating,image);
         listView.setAdapter(adapter);
-        Utility.setListViewHeightBasedOnChildren(listView);
+
+        listView.postDelayed(new Runnable() {                       //позволяет запустить приложение с самого начала макета
+            public void run() {                                     //listView показывается весь и не прокручивается
+                Utility.setListViewHeightBasedOnChildren(listView);
+            }
+        }, 400);
+
+       // Utility.setListViewHeightBasedOnChildren(listView);
         createSpinner(view);
         return view;
     }
