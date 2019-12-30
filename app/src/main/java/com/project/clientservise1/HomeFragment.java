@@ -9,7 +9,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 
@@ -21,6 +24,7 @@ public class HomeFragment extends Fragment {
 
    private Spinner spinner = null;
    private String[] category = {"Категория услуг", "Сантехник", "Парикмахер", "Мастер маникюра", "Юрист", "Репетитор"};
+    private LinearLayout linearLayout;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -36,8 +40,21 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        String[] nameCompany = {"Company 1","Company 2", "Company 3", "Company 4", "Company 5"};
+        String[] Address = {"Надибаидзе 30","Комарова 5","Фокина 10","ВГУЭС","Калинина 115"};
+        String[] workTime = {"Пн-Пт 10:00-20:00","Пн-Пт 10:00-20:00","Пн-Пт 10:00-20:00",
+                "Пн-Пт 10:00-20:00","Пн-Пт 10:00-20:00"};
+        String[] Rating = {"5.0","4.2","3.1","0.0","2.6"};
+        int[] image = {R.drawable.baseline_account_circle_black_48dp, R.drawable.baseline_account_circle_black_48dp,
+                R.drawable.baseline_account_circle_black_48dp, R.drawable.baseline_account_circle_black_48dp,
+                R.drawable.baseline_account_circle_black_48dp};
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);        //Вот так реализуется спиннер во фрагментах
-        //spinner = view.findViewById( R.id.spinnerCategory );
+
+        ListView listView = view.findViewById(R.id.lv_button);
+        ListButtonAdapter adapter = new ListButtonAdapter(getActivity(), nameCompany, Address,workTime,Rating,image);
+        listView.setAdapter(adapter);
+        Utility.setListViewHeightBasedOnChildren(listView);
         createSpinner(view);
         return view;
     }
