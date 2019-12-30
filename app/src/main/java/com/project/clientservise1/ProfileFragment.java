@@ -22,7 +22,8 @@ public class ProfileFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private Button btn_enter;
+    private Button btnEnter;
+    private Button btnRegistration;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,7 +32,9 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
              // ваша кнопка
-        btn_enter = view.findViewById(R.id.btn_enter);
+        btnEnter = view.findViewById(R.id.btn_enter);
+        btnRegistration = view.findViewById(R.id.btn_registration);
+
             //создаем листенер
         View.OnClickListener oclBtnOk = new View.OnClickListener() {
             @Override
@@ -41,8 +44,16 @@ public class ProfileFragment extends Fragment {
                 startActivity(intent);
             }
         };
+        View.OnClickListener oclBtnReg = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), RegistrationActivity.class);
+                startActivity(intent);
+            }
+        };
             //привязываем листенер к кнопке
-        btn_enter.setOnClickListener(oclBtnOk);
+        btnEnter.setOnClickListener(oclBtnOk);
+        btnRegistration.setOnClickListener(oclBtnReg);
 
         return view;
     }
