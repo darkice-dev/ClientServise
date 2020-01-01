@@ -8,8 +8,6 @@
         android:id="@+id/im_company"
         android:layout_width="109dp"
         android:layout_height="113dp"
-        android:paddingTop="10dp"
-        android:paddingRight="15dp"
         android:src="@drawable/baseline_account_circle_black_48dp" />
 
     <TextView
@@ -53,8 +51,6 @@
         android:layout_marginLeft="20dp"
         android:text="Рейтинг"
         android:textSize="17sp" />
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+
 
 </RelativeLayout>

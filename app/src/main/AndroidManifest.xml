@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegistrationCompany"></activity>
+        <activity android:name=".CompanyViewActivity"></activity>
+        <activity android:name=".RegistrationCompany" />
         <activity android:name=".RegistrationClient" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".HelpActivity" />

@@ -11,7 +11,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/rl_logo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/im_company"
+                android:layout_width="109dp"
+                android:layout_height="113dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/start_logo512" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_toRightOf="@id/im_company"
+                android:text="@string/name"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@id/im_company"
+                android:text="@string/CRM" />
+
+        </RelativeLayout>
+
+
+        <!--<LinearLayout
             android:id="@+id/layout_name_of_application"
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -20,10 +53,17 @@
             android:orientation="vertical"
             android:padding="10dp">
 
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/start_logo512"/>
+
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/im_company"
                 android:text="@string/name"
                 android:textSize="30sp"/>
 
@@ -32,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/CRM" />
 
-        </LinearLayout>
+        </LinearLayout>-->
 
         <LinearLayout
             android:id="@+id/layout_spinner"
@@ -40,7 +80,7 @@
             android:layout_height="match_parent"
             android:background="#FFFFFF"
             android:gravity="center"
-            android:layout_below="@id/layout_name_of_application"
+            android:layout_below="@id/rl_logo"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -65,7 +105,7 @@
             <ListView
                 android:id="@+id/lv_button"
                 android:layout_width="match_parent"
-                android:layout_height="369dp"
+                android:layout_height="494dp"
                 tools:ignore="NestedScrolling" />
 
         </LinearLayout>
