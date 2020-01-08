@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NoteFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Записи" />
+        android:layout_height="match_parent">
+    </ListView>
 
-</FrameLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/iv_note"
+        android:layout_width="171dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/start_logo512" />
+
+    <TextView
+        android:id="@+id/tv_help"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_note"
+        android:layout_centerHorizontal="true"
+        android:text="Тут будут отображаться ваши заказы"
+        android:textColor="@color/Black"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_help"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Записаться"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:background="@drawable/button_style"
+        />
+
+</RelativeLayout>

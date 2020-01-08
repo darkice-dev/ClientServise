@@ -16,7 +16,7 @@ public class EnterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_enter);
 
         Button btnEnter = findViewById(R.id.btn_enter);
-        TextView help = findViewById(R.id.help);
+        TextView help = findViewById(R.id.tv_btn_help);
         TextView Reg = findViewById(R.id.Registration);
 
         btnEnter.setOnClickListener(new View.OnClickListener() {

@@ -6,73 +6,99 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_enter"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
-        android:text="@string/Enter"
-        android:textSize="20sp" />
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
-        android:text="@string/name"
-        android:textSize="30sp"/>
+    <RelativeLayout
+        android:id="@+id/rl_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorWhite">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/CRM"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp" />
+        <ImageView
+            android:id="@+id/im_company"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/start_logo512" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/im_company"
+            android:text="@string/name"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/im_company"
+            android:text="@string/CRM" />
+
+    </RelativeLayout>
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/et_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/rl_logo"
         android:ems="10"
         android:hint="@string/e_mail"
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/et_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
+        android:layout_below="@+id/et_email"
         android:ems="10"
         android:hint="@string/Password"
         android:inputType="textPassword" />
 
+    <Button
+        android:id="@+id/btn_enter"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/et_password"
+        android:layout_marginTop="20dp"
+        android:text="@string/Enter"
+        android:background="@drawable/button_style"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
 
 
     <TextView
+        android:id="@+id/tv_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="345dp"
+        android:layout_below="@id/btn_enter"
         android:text="@string/miss_your_password"/>
 
     <TextView
-        android:id="@+id/help"
+        android:id="@+id/tv_btn_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="360dp"
+        android:layout_below="@+id/tv_help"
         android:text="@string/help_missing_password"
         android:textColor="@android:color/holo_blue_dark"/>
 
     <TextView
+        android:id="@+id/tv_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="580dp"
+        android:layout_below="@+id/tv_btn_help"
         android:text="@string/not_have_account"/>
 
     <TextView
@@ -80,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="600dp"
+        android:layout_below="@+id/tv_question"
         android:text="@string/registration"
         android:textSize="15sp"
         android:textColor="@android:color/holo_blue_dark"/>

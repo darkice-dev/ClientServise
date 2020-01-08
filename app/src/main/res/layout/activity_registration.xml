@@ -6,21 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".RegistrationActivity">
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
-        android:text="@string/name"
-        android:textSize="30sp"/>
+    <RelativeLayout
+        android:id="@+id/rl_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorWhite">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/CRM"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp" />
+        <ImageView
+            android:id="@+id/im_company"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/start_logo512" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/im_company"
+            android:text="@string/name"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/im_company"
+            android:text="@string/CRM" />
+
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/editText1"
@@ -62,6 +79,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="350dp"
         android:text="@string/next"
+        android:background="@drawable/button_style"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
         android:textSize="20sp" />
 
 </RelativeLayout>
