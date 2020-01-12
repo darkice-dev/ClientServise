@@ -17,7 +17,7 @@
         android:layout_height="152dp"
         android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/start_logo512" />
+        android:src="@drawable/calend_icons_plus512" />
 
     <TextView
         android:id="@+id/tv_help"

@@ -17,7 +17,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/start_logo512" />
+            android:src="@drawable/start_logo256" />
 
         <TextView
             android:id="@+id/tv_name"

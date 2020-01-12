@@ -13,7 +13,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="250dp"
         android:layout_marginEnd="100dp"
-        android:src="@drawable/start_logo512" />
+        android:src="@drawable/start_logo256" />
 
     <TextView
         android:id="@+id/tv_name"
