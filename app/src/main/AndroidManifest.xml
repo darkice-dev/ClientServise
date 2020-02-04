@@ -15,7 +15,9 @@
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".HelpActivity" />
         <activity android:name=".EnterActivity" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden"/>
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

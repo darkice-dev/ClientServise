@@ -7,12 +7,15 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -25,6 +28,8 @@ public class HomeFragment extends Fragment {
 
 
    private Spinner spinner = null;
+   private EditText inputSearch;
+   private ListButtonAdapter adapter;
    private String[] category = {"Категория услуг", "Сантехник", "Парикмахер", "Мастер маникюра", "Юрист", "Репетитор"};
 
 
@@ -54,6 +59,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);        //Вот так реализуется спиннер во фрагментах
 
         final ListView listView = view.findViewById(R.id.lv_button);
+        inputSearch = view.findViewById(R.id.inputSearch);
         ListButtonAdapter adapter = new ListButtonAdapter(getActivity(), nameCompany, Address,workTime,Rating,image);
         listView.setAdapter(adapter);
 
@@ -72,15 +78,8 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        createSpinner(view);
+
         return view;
     }
 
-    private void createSpinner( View view )
-    {
-        spinner = view.findViewById( R.id.spinnerCategory );
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, category);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-    }
 }
