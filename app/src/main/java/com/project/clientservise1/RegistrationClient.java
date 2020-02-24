@@ -23,24 +23,18 @@ public class RegistrationClient extends AppCompatActivity {
         EditText Password = findViewById(R.id.PasswordClient);
         final TextView HelpPass = findViewById(R.id.HelpMassage);
 
-        endReg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(RegistrationClient.this, MainActivity.class);
-                startActivity(intent);
-            }
+        endReg.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setClass(RegistrationClient.this, MainActivity.class);
+            startActivity(intent);
         });
 
-        Password.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN) {
-                    HelpPass.setText("Ваш пароль должен содержать не менее 8 символов,среди "+
-                            "которых должны быть буквы(a-z) и цифры(0-9)");
-                }
-                return false;
+        Password.setOnTouchListener((v, event) -> {
+            if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                HelpPass.setText("Ваш пароль должен содержать не менее 8 символов,среди "+
+                        "которых должны быть буквы(a-z) и цифры(0-9)");
             }
+            return false;
         });
     }
 }

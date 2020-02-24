@@ -12,11 +12,11 @@ import androidx.annotation.Nullable;
 
 public class ListServiceAdapter extends ArrayAdapter<String> {
 
-    Context c;
-    String[] service;
-    String[] price;
-    String[] workTime;
-    LayoutInflater inflater;
+    private Context c;
+    private String[] service;
+    private String[] price;
+    private String[] workTime;
+    private LayoutInflater inflater;
 
     public ListServiceAdapter(@NonNull Context context, String[] service, String[] price,
                               String[] workTime) {
@@ -32,8 +32,7 @@ public class ListServiceAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        if(convertView == null)
-        {
+        if(convertView == null) {
             inflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.list_service, null);
         }

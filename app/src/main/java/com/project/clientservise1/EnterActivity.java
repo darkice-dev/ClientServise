@@ -19,31 +19,22 @@ public class EnterActivity extends AppCompatActivity {
         TextView help = findViewById(R.id.tv_btn_help);
         TextView Reg = findViewById(R.id.Registration);
 
-        btnEnter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(EnterActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
+        btnEnter.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setClass(EnterActivity.this, MainActivity.class);
+            startActivity(intent);
         });
 
-        help.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(EnterActivity.this, HelpActivity.class);
-                startActivity(intent);
-            }
+        help.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setClass(EnterActivity.this, HelpActivity.class);
+            startActivity(intent);
         });
 
-        Reg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(EnterActivity.this, RegistrationActivity.class);
-                startActivity(intent);
-            }
+        Reg.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setClass(EnterActivity.this, RegistrationActivity.class);
+            startActivity(intent);
         });
 
     }

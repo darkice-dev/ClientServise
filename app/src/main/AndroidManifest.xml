@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.project.clientservise1">
 
     <application
@@ -8,15 +9,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".CompanyViewActivity" />
         <activity android:name=".RegistrationCompany" />
         <activity android:name=".RegistrationClient" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".HelpActivity" />
         <activity android:name=".EnterActivity" />
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity android:name=".SplashActivity"
+
+            android:theme="@style/SplashTheme"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

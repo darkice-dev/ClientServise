@@ -1,15 +1,11 @@
 package com.project.clientservise1;
 
-import androidx.annotation.NonNull;
+import android.os.Bundle;
+import android.widget.FrameLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
-import android.widget.Spinner;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -26,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mMainFrame = (FrameLayout) findViewById(R.id.main_frame);
-        mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
+        mMainFrame = findViewById(R.id.main_frame);
+        mMainNav = findViewById(R.id.main_nav);
 
         homeFragment = new HomeFragment();
         noteFragment = new NoteFragment();
@@ -35,24 +31,23 @@ public class MainActivity extends AppCompatActivity {
 
         setFragment(homeFragment);
 
-        mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        mMainNav.setOnNavigationItemSelectedListener(menuItem -> {
 
-                switch (menuItem.getItemId())
-                {
-                    case R.id.nav_home:
-                        setFragment(homeFragment);
-                        return true;
-                    case R.id.nav_note:
-                        setFragment(noteFragment);
-                        return true;
-                    case R.id.nav_profile:
-                        setFragment(profileFragment);
-                        return true;
-                        default:
-                            return false;
-                }
+            switch (menuItem.getItemId()) {
+                case R.id.nav_home:
+                    setFragment(homeFragment);
+                    return true;
+
+                case R.id.nav_note:
+                    setFragment(noteFragment);
+                    return true;
+
+                case R.id.nav_profile:
+                    setFragment(profileFragment);
+                    return true;
+
+                    default:
+                        return false;
             }
         });
 
@@ -63,10 +58,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setFragment(Fragment fragment) {
-
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_frame, fragment);
         fragmentTransaction.commit();
-
     }
 }

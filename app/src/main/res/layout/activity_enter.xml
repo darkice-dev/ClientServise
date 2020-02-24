@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorWhite"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -17,6 +18,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
             android:src="@drawable/start_logo256" />
 
         <TextView
@@ -24,18 +26,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:layout_toRightOf="@id/im_company"
+            android:layout_toEndOf="@id/im_company"
+            android:layout_marginEnd="30dp"
             android:text="@string/name"
-            android:textSize="25sp" />
-
-      <!--  <TextView
+            android:textSize="18sp" />
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_name"
-            android:layout_marginLeft="29dp"
+            android:layout_marginEnd="30dp"
             android:layout_marginTop="0dp"
-            android:layout_toRightOf="@id/im_company"
-            android:text="@string/CRM" />-->
+            android:textSize="13sp"
+            android:layout_toEndOf="@id/im_company"
+            android:text="@string/CRM" />
 
     </RelativeLayout>
 
