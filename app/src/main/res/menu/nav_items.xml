@@ -4,14 +4,14 @@
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/baseline_home_black_18dp"
+        android:icon="@drawable/baseline_home_white_48mdp"
         android:title="@string/nav_home" />
     <item
         android:id="@+id/nav_note"
-        android:icon="@drawable/baseline_assignment_black_18dp"
+        android:icon="@drawable/baseline_assignment_white_48mdp"
         android:title="@string/nav_note" />
     <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/baseline_account_circle_black_18dp"
+        android:icon="@drawable/blank_avatar_white_512_2"
         android:title="@string/nav_profile" />
 </menu>
