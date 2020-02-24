@@ -25,13 +25,18 @@ import android.widget.Spinner;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
+    private Spinner spinner = null;
+    private EditText inputSearch;
+    private ListButtonAdapter adapter;
 
-
-   private Spinner spinner = null;
-   private EditText inputSearch;
-   private ListButtonAdapter adapter;
-   private String[] category = {"Категория услуг", "Сантехник", "Парикмахер", "Мастер маникюра", "Юрист", "Репетитор"};
-
+    private String[] category = {
+            "Категория услуг",
+            "Сантехник",
+            "Парикмахер",
+            "Мастер маникюра",
+            "Юрист",
+            "Репетитор"
+    };
 
     public HomeFragment() {
         // Required empty public constructor
@@ -47,36 +52,63 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        String[] nameCompany = {"Company 1","Company 2", "Company 3", "Company 4", "Company 5"};
-        String[] Address = {"Надибаидзе, 30","Комарова, 5","Фокина, 10","ВГУЭС","Калинина, 115"};
-        String[] workTime = {"Пн-Пт: 10:00-20:00","Пн-Пт: 10:00-20:00","Пн-Пт: 10:00-20:00",
-                "Пн-Пт: 10:00-20:00","Пн-Пт: 10:00-20:00"};
-        String[] Rating = {"5.0","4.2","3.1","0.0","2.6"};
-        int[] image = {R.drawable.baseline_account_circle_black_48dp, R.drawable.baseline_account_circle_black_48dp,
-                R.drawable.baseline_account_circle_black_48dp, R.drawable.baseline_account_circle_black_48dp,
-                R.drawable.baseline_account_circle_black_48dp};
+        String[] nameCompany = {
+                "Company 1",
+                "Company 2",
+                "Company 3",
+                "Company 4",
+                "Company 5"
+        };
+
+        String[] Address = {
+                "Надибаидзе, 30",
+                "Комарова, 5",
+                "Фокина, 10",
+                "ВГУЭС",
+                "Калинина, 115"
+        };
+
+        String[] workTime = {
+                "Пн-Пт: 10:00-20:00",
+                "Пн-Пт: 10:00-20:00",
+                "Пн-Пт: 10:00-20:00",
+                "Пн-Пт: 10:00-20:00",
+                "Пн-Пт: 10:00-20:00"
+        };
+
+        String[] Rating = {
+                "5.0",
+                "4.2",
+                "3.1",
+                "0.0",
+                "2.6"
+        };
+
+        int[] image = {
+                R.drawable.baseline_account_circle_black_48dp,
+                R.drawable.baseline_account_circle_black_48dp,
+                R.drawable.baseline_account_circle_black_48dp,
+                R.drawable.baseline_account_circle_black_48dp,
+                R.drawable.baseline_account_circle_black_48dp
+        };
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);        //Вот так реализуется спиннер во фрагментах
 
         final ListView listView = view.findViewById(R.id.lv_button);
         inputSearch = view.findViewById(R.id.inputSearch);
-        ListButtonAdapter adapter = new ListButtonAdapter(getActivity(), nameCompany, Address,workTime,Rating,image);
+        ListButtonAdapter adapter = new ListButtonAdapter(getActivity(), nameCompany, Address, workTime, Rating, image);
         listView.setAdapter(adapter);
 
-        listView.postDelayed(new Runnable() {                       //позволяет запустить приложение с самого начала макета
-            public void run() {                                     //listView показывается весь и не прокручивается
-                Utility.setListViewHeightBasedOnChildren(listView);
-            }
+        //позволяет запустить приложение с самого начала макета
+        listView.postDelayed(() -> {                                     //listView показывается весь и не прокручивается
+            Utility.setListViewHeightBasedOnChildren(listView);
         }, 400);
 
-       // Utility.setListViewHeightBasedOnChildren(listView);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {             //Обработчик нажатия на ListView
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {              //Позволяет сделать нажатие и перейти на новый активити
-                Intent intent = new Intent(getActivity(), CompanyViewActivity.class);
-                startActivity(intent);
-            }
+        // Utility.setListViewHeightBasedOnChildren(listView);
+        //Обработчик нажатия на ListView
+        listView.setOnItemClickListener((parent, view1, position, id) -> {              //Позволяет сделать нажатие и перейти на новый активити
+            Intent intent = new Intent(getActivity(), CompanyViewActivity.class);
+            startActivity(intent);
         });
 
         return view;

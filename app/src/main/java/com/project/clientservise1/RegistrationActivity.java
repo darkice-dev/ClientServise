@@ -19,22 +19,16 @@ public class RegistrationActivity extends AppCompatActivity {
         Button btnNext = findViewById(R.id.b_next);
         TextView RegCompany = findViewById(R.id.tv_RegCom);
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(RegistrationActivity.this, RegistrationClient.class);
-                startActivity(intent);
-            }
+        btnNext.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setClass(RegistrationActivity.this, RegistrationClient.class);
+            startActivity(intent);
         });
 
-        RegCompany.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(RegistrationActivity.this, RegistrationCompany.class);
-                startActivity(intent);
-            }
+        RegCompany.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setClass(RegistrationActivity.this, RegistrationCompany.class);
+            startActivity(intent);
         });
     }
 }

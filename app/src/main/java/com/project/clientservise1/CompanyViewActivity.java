@@ -31,10 +31,10 @@ public class CompanyViewActivity extends AppCompatActivity {
         ListServiceAdapter adapter = new ListServiceAdapter(this, service, price, timeWork);
         listView.setAdapter(adapter);
 
-        listView.postDelayed(new Runnable() {                       //позволяет запустить приложение с самого начала макета
-            public void run() {                                     //listView показывается весь и не прокручивается
-                Utility.setListViewHeightBasedOnChildren(listView);
-            }
+        //позволяет запустить приложение с самого начала макета
+        listView.postDelayed(() -> {
+            //listView показывается весь и не прокручивается
+            Utility.setListViewHeightBasedOnChildren(listView);
         }, 400);
     }
 }
