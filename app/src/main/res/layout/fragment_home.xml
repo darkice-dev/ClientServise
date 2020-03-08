@@ -56,21 +56,22 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <EditText
-                android:id="@+id/inputSearch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusableInTouchMode="true"
-                android:hint="Поиск услуги"
-                android:inputType="textEmailAddress" />
-
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
                 android:background="@drawable/button_style"
                 android:text="Категории услуг"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite"/>
+
+            <EditText
+                android:id="@+id/inputSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:focusableInTouchMode="true"
+                android:hint="Поиск услуги"
+                android:inputType="textEmailAddress" />
 
         </LinearLayout>
 
@@ -87,11 +88,11 @@
             <ListView
                 android:id="@+id/lv_button"
                 android:layout_width="match_parent"
-                android:layout_height="494dp"
-                tools:ignore="NestedScrolling"/>
+                android:layout_height="481dp"
+                tools:ignore="NestedScrolling" />
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
                 android:background="@drawable/button_style"
                 android:text="Посмотреть все"
                 android:textStyle="bold"

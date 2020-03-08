@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageViewAvatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/blank_avatar_white_512_2"
+                />
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Гость"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/txtUserPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="guest@mail.com"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/headerLayout"
+            android:background="@color/Gray"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Gray"
+                android:text="   Уведомления"
+                android:textAlignment="inherit"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="   Уведомления"
+                android:textAlignment="viewStart"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textColor="@color/Black" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="   Настройка уведомлений"
+                android:textAlignment="viewStart"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textColor="@color/Black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Gray"
+                android:text="   Другое"
+                android:textAlignment="inherit"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_employee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="   Профиль"
+                android:textAlignment="viewStart"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textColor="@color/Black" />
+
+            <Button
+                android:id="@+id/btn_red_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="   Сотрудники"
+                android:textAlignment="viewStart"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textColor="@color/Black" />
+
+            <Button
+                android:id="@+id/btn_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="   Записи"
+                android:textAlignment="viewStart"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textColor="@color/Black" />
+
+            <Button
+                android:id="@+id/btn_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="   Помощь"
+                android:textAlignment="viewStart"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textColor="@color/Black" />
+
+
+            <!--            <Button-->
+            <!--                android:id="@+id/btn_registration"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@color/colorWhite"-->
+            <!--                android:text="   Зарегистрироваться"-->
+            <!--                android:textAlignment="viewStart"-->
+            <!--                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"-->
+            <!--                android:textColor="@color/RED" />-->
+
+            <Button
+                android:id="@+id/btn_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="   О приложении"
+                android:textAlignment="viewStart"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textColor="@color/Black" />
+
+            <Button
+                android:id="@+id/btn_enter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="   Выйти"
+                android:textAlignment="viewStart"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textColor="@color/RED" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
