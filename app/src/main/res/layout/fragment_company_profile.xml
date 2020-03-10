@@ -7,7 +7,8 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@color/Gray">
         <LinearLayout
             android:id="@+id/headerLayout"
             android:layout_width="match_parent"
@@ -29,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Гость"
+                android:text="Компания"
                 android:textColor="@color/colorWhite"
                 android:textSize="25sp" />
 
@@ -39,130 +40,131 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:singleLine="true"
-                android:text="guest@mail.com"
+                android:text="company@mail.com"
                 android:textColor="@color/colorWhite"
                 android:textSize="15sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/layout_button"
+        <TextView
+            android:id="@+id/tv_memo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/headerLayout"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerLayout"
             android:background="@color/Gray"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:text="   Уведомления"
+            android:textAlignment="inherit"
+            android:textColor="@color/Black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/Gray"
-                android:text="   Уведомления"
-                android:textAlignment="inherit"
-                android:textColor="@color/Black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+        <Switch
+            android:id="@+id/sw_memo"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_below="@+id/tv_memo"
+            android:background="@color/colorWhite"
+            android:checked="true"
+            android:text="   Уведомления"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:thumbTint="@color/colorPrimary"
+            android:trackTint="@color/design_default_color_primary_dark" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:text="   Уведомления"
-                android:textAlignment="viewStart"
-                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-                android:textColor="@color/Black" />
+        <Button
+            android:id="@+id/btn_option_memo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sw_memo"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:text="   Настройка уведомлений"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:text="   Настройка уведомлений"
-                android:textAlignment="viewStart"
-                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-                android:textColor="@color/Black" />
+        <TextView
+            android:id="@+id/tv_another"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_option_memo"
+            android:background="@color/Gray"
+            android:text="   Другое"
+            android:textAlignment="inherit"
+            android:textColor="@color/Black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/Gray"
-                android:text="   Другое"
-                android:textAlignment="inherit"
-                android:textColor="@color/Black"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+        <Button
+            android:id="@+id/btn_red_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_another"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:text="   Профиль"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black" />
 
-            <Button
-                android:id="@+id/btn_employee"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:text="   Профиль"
-                android:textAlignment="viewStart"
-                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-                android:textColor="@color/Black" />
+        <Button
+            android:id="@+id/btn_employee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_red_profile"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:text="   Сотрудники"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black" />
 
-            <Button
-                android:id="@+id/btn_red_profile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:text="   Сотрудники"
-                android:textAlignment="viewStart"
-                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-                android:textColor="@color/Black" />
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_employee"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:text="   Записи"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black" />
 
-            <Button
-                android:id="@+id/btn_record"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:text="   Записи"
-                android:textAlignment="viewStart"
-                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-                android:textColor="@color/Black" />
+        <Button
+            android:id="@+id/btn_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_record"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:text="   Помощь"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black" />
 
-            <Button
-                android:id="@+id/btn_help"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:text="   Помощь"
-                android:textAlignment="viewStart"
-                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-                android:textColor="@color/Black" />
+        <Button
+            android:id="@+id/btn_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_help"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:text="   О приложении"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black" />
 
-
-            <!--            <Button-->
-            <!--                android:id="@+id/btn_registration"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@color/colorWhite"-->
-            <!--                android:text="   Зарегистрироваться"-->
-            <!--                android:textAlignment="viewStart"-->
-            <!--                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"-->
-            <!--                android:textColor="@color/RED" />-->
-
-            <Button
-                android:id="@+id/btn_about"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:text="   О приложении"
-                android:textAlignment="viewStart"
-                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-                android:textColor="@color/Black" />
-
-            <Button
-                android:id="@+id/btn_enter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:text="   Выйти"
-                android:textAlignment="viewStart"
-                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-                android:textColor="@color/RED" />
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/btn_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_about"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:text="   Выйти"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/RED" />
 
     </RelativeLayout>
 
