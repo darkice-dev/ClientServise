@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +23,8 @@ public class ProfileFragment extends Fragment {
 
     private Button btnEnter;
     private Button btnRegistration;
+    private Button btnHelp;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class ProfileFragment extends Fragment {
         // ваша кнопка
         btnEnter = view.findViewById(R.id.btn_enter);
         btnRegistration = view.findViewById(R.id.btn_registration);
+        btnHelp = view.findViewById(R.id.btn_help);
 
         //создаем листенер
         View.OnClickListener onClickBtnOk = v -> {
@@ -44,9 +47,12 @@ public class ProfileFragment extends Fragment {
             startActivity(intent);
         };
 
+
+
         //привязываем листенер к кнопке
         btnEnter.setOnClickListener(onClickBtnOk);
         btnRegistration.setOnClickListener(onClickBtnReg);
+
 
         return view;
     }
