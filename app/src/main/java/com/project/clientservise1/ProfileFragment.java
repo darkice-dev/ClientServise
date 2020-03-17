@@ -35,10 +35,16 @@ public class ProfileFragment extends Fragment {
         btnEnter = view.findViewById(R.id.btn_enter);
         btnRegistration = view.findViewById(R.id.btn_registration);
         btnHelp = view.findViewById(R.id.btn_help);
+        //HelpFragment fragmentHelp = new HelpFragment();
 
         //создаем листенер
         View.OnClickListener onClickBtnOk = v -> {
             Intent intent = new Intent(getActivity(), EnterActivity.class);
+            startActivity(intent);
+        };
+
+        View.OnClickListener onClickBtnHelp = v -> {
+            Intent intent = new Intent(getActivity(), HelpActivity.class);
             startActivity(intent);
         };
 
@@ -52,7 +58,7 @@ public class ProfileFragment extends Fragment {
         //привязываем листенер к кнопке
         btnEnter.setOnClickListener(onClickBtnOk);
         btnRegistration.setOnClickListener(onClickBtnReg);
-
+        btnHelp.setOnClickListener(onClickBtnHelp);
 
         return view;
     }

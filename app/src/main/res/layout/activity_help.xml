@@ -1,9 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/fragment_help"
     android:layout_height="match_parent"
-    tools:context=".HelpActivity">
+    android:background="@color/Gray"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_otstup"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/btn_record11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_otstup"
+            android:background="@color/colorWhite"
+            android:text="Как записаться на услугу?"
+            android:paddingLeft="20dp"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:textAlignment="viewStart"
+            android:textSize="15sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"/>
+
+        <Button
+            android:id="@+id/btn_record21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_otstup"
+            android:background="@color/colorWhite"
+            android:text="Как записаться на услугу?"
+            android:paddingLeft="20dp"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+            android:textAlignment="viewStart"
+            android:textSize="15sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_record1"
+            android:layout_below="@+id/btn_record21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_record1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="20dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Необходимо зарегистрироваться или войти в аккаунт, на главной странице выбрать категорию услуг, выбрать саму услугу, в списке компаний выбрать подходящую вам, и перейти к оформлению, выбрать нужное время и адрес оказания услуги и нажать кнопку записаться."
+                android:textAlignment="viewStart"
+                android:textColor="@color/DarkDarkGray"
+                android:textSize="14sp"
+                android:lineHeight="25dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_record12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_below="@+id/ll_record1"
+            android:text="Как редактировать запись? Перенести услугу. Добавить описание и тд."
+            android:paddingLeft="20dp"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btn_record22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_below="@+id/ll_record1"
+            android:text="Как редактировать запись? Перенести услугу. Добавить описание и тд."
+            android:paddingLeft="20dp"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_record2"
+            android:layout_below="@+id/btn_record22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_record2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="20dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Откройте вкладку записи, выберите запись которую требуется изменить, на странице записи, нажмите кнопку редактировать, измените необходимые параметры и нажмите кнопку сохранить."
+                android:textAlignment="viewStart"
+                android:textColor="@color/DarkDarkGray"
+                android:textSize="14sp"
+                android:lineHeight="25dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_record13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_below="@+id/ll_record2"
+            android:text="Как отменить запись?"
+            android:paddingLeft="20dp"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btn_record23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_below="@+id/ll_record2"
+            android:text="Как отменить запись?"
+            android:paddingLeft="20dp"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_record3"
+            android:layout_below="@+id/btn_record23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_record3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="20dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Откройте вкладку записи, выберите запись которую требуется отменить, на странице записи, нажмите кнопку отменить."
+                android:textAlignment="viewStart"
+                android:textColor="@color/DarkDarkGray"
+                android:textSize="14sp"
+                android:lineHeight="25dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+        android:id="@+id/btn_record14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:layout_below="@+id/ll_record3"
+        android:text="Указанные мной данные не верны, как их изменить?"
+        android:paddingLeft="20dp"
+        android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/Black"
+        android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btn_record24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_below="@+id/ll_record3"
+            android:text="Указанные мной данные не верны, как их изменить?"
+            android:paddingLeft="20dp"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_record4"
+            android:layout_below="@+id/btn_record24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_record4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="20dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Перейдите во вкладку профиль и найдите кнопку редактировать профиль, отредактируйте данные и нажмите кнопку сохранить"
+                android:textAlignment="viewStart"
+                android:textColor="@color/DarkDarkGray"
+                android:textSize="14sp"
+                android:lineHeight="25dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_record15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_below="@+id/ll_record4"
+            android:text="Как добавить аватар в приложение?"
+            android:paddingLeft="20dp"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btn_record25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_below="@+id/ll_record4"
+            android:text="Как добавить аватар в приложение?"
+            android:paddingLeft="20dp"
+            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_record5"
+            android:layout_below="@+id/btn_record25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_record5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingStart="20dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Перейдите во вкладку профиль и найдите кнопку редактировать профиль, нажмите кнопку добавить/изменить аватар профиля."
+                android:textAlignment="viewStart"
+                android:textColor="@color/DarkDarkGray"
+                android:textSize="14sp"
+                android:lineHeight="25dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
