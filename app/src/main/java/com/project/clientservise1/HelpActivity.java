@@ -1,20 +1,33 @@
 package com.project.clientservise1;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.content.Intent;
 import android.opengl.Visibility;
 import android.os.Bundle;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class HelpActivity extends AppCompatActivity {
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("Помощь");
 
         Button btnRecord11 = findViewById(R.id.btn_record11);
         Button btnRecord21 = findViewById(R.id.btn_record21);
@@ -97,4 +110,11 @@ public class HelpActivity extends AppCompatActivity {
             btnRecord15.setVisibility(View.VISIBLE);
         });
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
 }

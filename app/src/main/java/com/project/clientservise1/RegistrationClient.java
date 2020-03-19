@@ -19,6 +19,8 @@ public class RegistrationClient extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_client);
 
+        getSupportActionBar().hide();
+
         Button endReg = findViewById(R.id.b_reg);
         EditText Password = findViewById(R.id.PasswordClient);
         final TextView HelpPass = findViewById(R.id.HelpMassage);

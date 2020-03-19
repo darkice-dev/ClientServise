@@ -27,6 +27,8 @@ public class CompanyViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_view);
 
+        getSupportActionBar().hide();
+
         final ListView listView = findViewById(R.id.lv_service);
         ListServiceAdapter adapter = new ListServiceAdapter(this, service, price, timeWork);
         listView.setAdapter(adapter);

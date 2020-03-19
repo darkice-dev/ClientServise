@@ -19,6 +19,8 @@ public class RegistrationCompany extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_company);
 
+        getSupportActionBar().hide();
+
         Button btnEndRegCom = findViewById(R.id.b_regCom);
         EditText editTextPassword = findViewById(R.id.PasswordCompany);
         final TextView HelpPass = findViewById(R.id.HelpMassage);

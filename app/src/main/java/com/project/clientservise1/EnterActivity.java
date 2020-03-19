@@ -15,6 +15,8 @@ public class EnterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter);
 
+        getSupportActionBar().hide();
+
         Button btnEnter = findViewById(R.id.btn_enter);
         TextView help = findViewById(R.id.tv_btn_help);
         TextView Reg = findViewById(R.id.Registration);

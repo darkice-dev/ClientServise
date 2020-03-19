@@ -15,6 +15,8 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
 
+        getSupportActionBar().hide();
+
 
         Button btnNext = findViewById(R.id.b_next);
         TextView RegCompany = findViewById(R.id.tv_RegCom);

@@ -5,18 +5,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/start_logo512"
+        android:label="@string/name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SetNotifActivity"></activity>
+        <activity android:name=".OptionNotifyActivity"></activity>
         <activity android:name=".CompanyViewActivity" />
         <activity android:name=".RegistrationCompany" />
         <activity android:name=".RegistrationClient" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".HelpActivity" />
+        <activity android:name=".HelpActivity"/>
+
         <activity android:name=".EnterActivity" />
         <activity
             android:name=".MainActivity"
