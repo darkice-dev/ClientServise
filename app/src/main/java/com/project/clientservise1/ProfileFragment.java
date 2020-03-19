@@ -24,6 +24,7 @@ public class ProfileFragment extends Fragment {
     private Button btnEnter;
     private Button btnRegistration;
     private Button btnHelp;
+    private Button btnAbout;
 
 
     @Override
@@ -35,6 +36,7 @@ public class ProfileFragment extends Fragment {
         btnEnter = view.findViewById(R.id.btn_enter);
         btnRegistration = view.findViewById(R.id.btn_registration);
         btnHelp = view.findViewById(R.id.btn_help);
+        btnAbout = view.findViewById(R.id.btn_about);
         //HelpFragment fragmentHelp = new HelpFragment();
 
         //создаем листенер
@@ -53,12 +55,18 @@ public class ProfileFragment extends Fragment {
             startActivity(intent);
         };
 
+        View.OnClickListener onClickBtnAbout = v -> {
+            Intent intent = new Intent(getActivity(), AboutActivity.class);
+            startActivity(intent);
+        };
+
 
 
         //привязываем листенер к кнопке
         btnEnter.setOnClickListener(onClickBtnOk);
         btnRegistration.setOnClickListener(onClickBtnReg);
         btnHelp.setOnClickListener(onClickBtnHelp);
+        btnAbout.setOnClickListener(onClickBtnAbout);
 
         return view;
     }

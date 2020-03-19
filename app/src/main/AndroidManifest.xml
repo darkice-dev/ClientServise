@@ -11,13 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".OptionNotifyActivity"></activity>
+        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".OptionNotifyActivity" />
         <activity android:name=".CompanyViewActivity" />
         <activity android:name=".RegistrationCompany" />
         <activity android:name=".RegistrationClient" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".HelpActivity"/>
-
+        <activity android:name=".HelpActivity" />
         <activity android:name=".EnterActivity" />
         <activity
             android:name=".MainActivity"
