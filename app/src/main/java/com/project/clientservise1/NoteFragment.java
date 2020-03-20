@@ -24,8 +24,8 @@ public class NoteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        View viewNote = inflater.inflate(R.layout.fragment_note, container, false);
 
-        return view;
+        return viewNote;
     }
 }
