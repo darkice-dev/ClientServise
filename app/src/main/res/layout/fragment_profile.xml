@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@color/Gray">
+
         <LinearLayout
             android:id="@+id/headerLayout"
             android:layout_width="match_parent"
@@ -22,8 +23,7 @@
                 android:id="@+id/imageViewAvatar"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/blank_avatar_white_512_2"
-                />
+                android:src="@drawable/blank_avatar_white_512_2" />
 
             <TextView
                 android:id="@+id/txtUserName"
@@ -50,8 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="10dp"
             android:layout_below="@+id/headerLayout"
-            android:background="@color/Gray"
-            />
+            android:background="@color/Gray" />
 
         <Button
             android:id="@+id/btn_help"
@@ -100,6 +99,33 @@
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/RED" />
+
+        <TextView
+            android:id="@+id/labelDebug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_enter"
+            android:layout_marginTop="10dp"
+            android:background="@color/Gray"
+            android:paddingLeft="15dp"
+            android:text="Debug"
+            android:textAlignment="inherit"
+            android:textColor="@color/Black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/debug_btn_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/labelDebug"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:paddingLeft="13dp"
+            android:text="Окно редактирования профиля Клиента"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black" />
 
     </RelativeLayout>
 

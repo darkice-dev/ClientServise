@@ -39,6 +39,8 @@ public class ProfileFragment extends Fragment {
         btnAbout = view.findViewById(R.id.btn_about);
         //HelpFragment fragmentHelp = new HelpFragment();
 
+
+
         //создаем листенер
         View.OnClickListener onClickBtnOk = v -> {
             Intent intent = new Intent(getActivity(), EnterActivity.class);
@@ -60,7 +62,9 @@ public class ProfileFragment extends Fragment {
             startActivity(intent);
         };
 
-
+        view.findViewById(R.id.debug_btn_edit_profile).setOnClickListener(e -> {
+            startActivity(new Intent(getActivity(), EditProfileActivity.class));
+        });
 
         //привязываем листенер к кнопке
         btnEnter.setOnClickListener(onClickBtnOk);
