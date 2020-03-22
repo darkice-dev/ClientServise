@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@color/Gray">
+        android:background="@color/LightGray">
         <LinearLayout
             android:id="@+id/headerLayout"
             android:layout_width="match_parent"
@@ -50,11 +50,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/headerLayout"
-            android:background="@color/Gray"
-            android:text="   Уведомления"
+            android:background="@color/LightGray"
+            android:text="Уведомления"
+            android:paddingEnd="10dp"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
             android:textAlignment="inherit"
-            android:textColor="@color/Black"
-            android:textSize="20sp"
+            android:textColor="@color/DarkGray"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
 <!--        <Button-->
@@ -71,13 +75,17 @@
         <Switch
             android:id="@+id/sw_memo"
             android:layout_width="match_parent"
-            android:layout_height="47dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/tv_memo"
             android:background="@color/colorWhite"
             android:checked="true"
-            android:text="   Уведомления"
+            android:text="Уведомления"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
             android:textColor="@color/Black"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:thumbTint="@color/colorPrimary"
             android:trackTint="@color/design_default_color_primary_dark" />
 
@@ -88,21 +96,29 @@
             android:layout_below="@+id/sw_memo"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   Настройка уведомлений"
+            android:text="Настройка уведомлений"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="5dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
 
         <TextView
             android:id="@+id/tv_another"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_option_memo"
-            android:background="@color/Gray"
-            android:text="   Другое"
+            android:background="@color/LightGray"
+            android:text="Другое"
+            android:paddingEnd="10dp"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
             android:textAlignment="inherit"
-            android:textColor="@color/Black"
-            android:textSize="20sp"
+            android:textColor="@color/DarkGray"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <Button
@@ -112,10 +128,14 @@
             android:layout_below="@+id/tv_another"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   Редактирование профиля"
+            android:text="Редактирование профиля"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="5dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/btn_record"
@@ -124,10 +144,14 @@
             android:layout_below="@+id/btn_red_profile"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   Записи"
+            android:text="Записи"
+            android:paddingEnd="10dp"
+            android:paddingStart="15dp"
+            android:layout_marginBottom="5dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/btn_help"
@@ -136,10 +160,14 @@
             android:layout_below="@+id/btn_record"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   Помощь"
+            android:text="Помощь"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="5dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/btn_about"
@@ -148,10 +176,14 @@
             android:layout_below="@+id/btn_help"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   О приложении"
+            android:text="О приложении"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="5dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/btn_enter"
@@ -160,10 +192,14 @@
             android:layout_below="@+id/btn_about"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   Выйти"
+            android:text="Выйти"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="5dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/RED" />
+            android:textColor="@color/RED"
+            android:textSize="15sp"/>
 
 
     </RelativeLayout>

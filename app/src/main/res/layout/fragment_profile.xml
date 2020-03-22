@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@color/Gray">
+        android:background="@color/LightGray">
 
         <LinearLayout
             android:id="@+id/headerLayout"
@@ -45,24 +45,22 @@
                 android:textSize="15sp" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_gray"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_below="@+id/headerLayout"
-            android:background="@color/Gray" />
-
         <Button
             android:id="@+id/btn_help"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_gray"
+            android:layout_below="@+id/headerLayout"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   Помощь"
+            android:text="Помощь"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/btn_about"
@@ -70,11 +68,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_help"
             android:background="@color/colorWhite"
+            android:layout_marginBottom="5dp"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   О приложении"
+            android:text="О приложении"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/btn_registration"
@@ -82,11 +84,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_about"
             android:background="@color/colorWhite"
+            android:layout_marginBottom="5dp"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   Зарегистрироваться"
+            android:text="Зарегистрироваться"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/RED" />
+            android:textColor="@color/RED"
+            android:textSize="15sp"/>
 
         <Button
             android:id="@+id/btn_enter"
@@ -95,23 +101,28 @@
             android:layout_below="@+id/btn_registration"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="   Войти"
+            android:text="Войти"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/RED" />
+            android:textColor="@color/RED"
+            android:textSize="15sp"/>
 
         <TextView
             android:id="@+id/labelDebug"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_enter"
-            android:layout_marginTop="10dp"
-            android:background="@color/Gray"
-            android:paddingLeft="15dp"
+            android:background="@color/LightGray"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
             android:text="Debug"
             android:textAlignment="inherit"
-            android:textColor="@color/Black"
-            android:textSize="20sp"
+            android:textColor="@color/DarkGray"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <Button
@@ -121,11 +132,13 @@
             android:layout_below="@id/labelDebug"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:paddingLeft="13dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
             android:text="Окно редактирования профиля Клиента"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"
+            android:textSize="15sp"/>
 
     </RelativeLayout>
 
