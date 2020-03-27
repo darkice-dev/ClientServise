@@ -1,6 +1,8 @@
 package com.project.clientservise1;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -63,5 +65,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_frame, fragment);
         fragmentTransaction.commit();
+    }
+
+    public void onClickOpenNotificationSettings(View view) {
+        Intent intent = new Intent(view.getContext(), NotificationSettingsActivity.class);
+        startActivity(intent);
     }
 }

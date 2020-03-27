@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,8 +38,6 @@ public class ProfileFragment extends Fragment {
         btnAbout = view.findViewById(R.id.btn_about);
         //HelpFragment fragmentHelp = new HelpFragment();
 
-
-
         //создаем листенер
         View.OnClickListener onClickBtnOk = v -> {
             Intent intent = new Intent(getActivity(), EnterActivity.class);
@@ -63,7 +60,7 @@ public class ProfileFragment extends Fragment {
         };
 
         view.findViewById(R.id.debug_btn_edit_profile).setOnClickListener(e -> {
-            startActivity(new Intent(getActivity(), EditProfileActivity.class));
+            startActivity(new Intent(getActivity(), ProfileEditorActivity.class));
         });
 
         //привязываем листенер к кнопке

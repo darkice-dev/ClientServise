@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class EditProfileActivity extends AppCompatActivity {
+public class ProfileEditorActivity extends AppCompatActivity {
 
 
     @Override
@@ -15,7 +15,7 @@ public class EditProfileActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         findViewById(R.id.flBtnSaveProfile).setOnClickListener(e -> {
-            onBackPressed();
+            finish();
         });
 
         findViewById(R.id.btn_change_avatar).setOnClickListener(e -> {

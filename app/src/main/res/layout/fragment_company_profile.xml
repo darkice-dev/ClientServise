@@ -82,6 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/sw_memo"
             android:background="@color/colorWhite"
+            android:onClick="onClickOpenNotificationSettings"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
             android:paddingStart="15dp"
             android:paddingEnd="10dp"
