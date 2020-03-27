@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EditProfileActivity">
+    tools:context=".EditProfileActivity"
+    android:background="@color/LightGray">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,105 +31,161 @@
             <Button
                 android:id="@+id/btn_change_avatar"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_style_white"
                 android:paddingHorizontal="15dp"
-                android:text="Изменить аватарку" />
+                android:textSize="15sp"
+                android:text="Изменить аватар" />
 
         </LinearLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/flBtnSaveProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_save" />
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/flBtnSaveProfile"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@android:drawable/ic_menu_save" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/tv_another"
-        android:layout_width="match_parent"
+<!--    <TextView-->
+<!--        android:id="@+id/tv_another"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/LightGray"-->
+<!--        android:text="Личные данные"-->
+<!--        android:paddingStart="15dp"-->
+<!--        android:paddingEnd="10dp"-->
+<!--        android:textAlignment="inherit"-->
+<!--        android:textColor="@color/DarkGray"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"/>-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/Gray"
-        android:text="Личные данные"
-        android:paddingLeft="15dp"
-        android:textAlignment="inherit"
-        android:textColor="@color/Black"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorWhite">
 
-    <EditText
-        android:id="@+id/editTextProfileName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Имя" />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Имя"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/DarkGray"/>
 
-    <EditText
-        android:id="@+id/editTextProfileSurName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Фамилия" />
+        <EditText
+            android:id="@+id/editTextProfileName"
+            android:layout_below="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:textSize="15sp"
+            android:inputType="textPersonName"
+            android:hint="Имя" />
 
-    <TextView
-        android:id="@+id/tv_another2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/Gray"
-        android:paddingLeft="15dp"
-        android:text="Безопасность"
-        android:textAlignment="inherit"
-        android:textColor="@color/Black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_surname"
+            android:layout_below="@+id/editTextProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Фамилия"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/DarkGray"/>
 
-    <EditText
-        android:id="@+id/editTextProfileLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Логин" />
+        <EditText
+            android:id="@+id/editTextProfileSurName"
+            android:layout_below="@+id/tv_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:textSize="15sp"
+            android:inputType="textPersonName"
+            android:hint="Фамилия" />
 
-    <EditText
-        android:id="@+id/editTextProfileEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="E-mail" />
+        <!--    <TextView-->
+        <!--        android:id="@+id/tv_another2"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="10dp"-->
+        <!--        android:background="@color/LightGray"-->
+        <!--        android:paddingLeft="15dp"-->
+        <!--        android:text="Безопасность"-->
+        <!--        android:textAlignment="inherit"-->
+        <!--        android:textColor="@color/DarkGray"-->
+        <!--        android:textSize="20sp"-->
+        <!--        android:textStyle="bold" />-->
 
-    <Button
-        android:id="@+id/buttonChangePassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/button_style"
-        android:text="Изменить пароль"
-        android:textColor="@color/colorWhite" />
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_below="@+id/editTextProfileSurName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Логин"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/DarkGray"/>
+
+        <EditText
+            android:id="@+id/editTextProfileLogin"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_login"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:textSize="15sp"
+            android:inputType="textPersonName"
+            android:hint="@string/login" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_below="@+id/editTextProfileLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/e_mail"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/DarkGray"/>
+
+        <EditText
+            android:id="@+id/editTextProfileEmail"
+            android:layout_below="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:textSize="15sp"
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress"/>
+
+        <Button
+            android:id="@+id/buttonChangePassword"
+            android:layout_below="@+id/editTextProfileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_style"
+            android:text="Изменить пароль"
+            android:textColor="@color/colorWhite" />
+
+
+    </RelativeLayout>
+
 
 </LinearLayout>
