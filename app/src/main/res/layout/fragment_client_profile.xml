@@ -94,16 +94,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/sw_memo"
+            android:layout_marginTop="5dp"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="Настройка уведомлений"
+            android:onClick="onClickOpenNotificationSettings"
             android:paddingStart="15dp"
             android:paddingEnd="10dp"
-            android:layout_marginTop="5dp"
+            android:text="Настройка уведомлений"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/Black"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tv_another"

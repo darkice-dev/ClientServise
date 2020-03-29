@@ -26,4 +26,5 @@
     <string name="not_have_account">У вас еще нет аккаунта?</string>
     <string name="registration">Зарегистрируйтесь</string>
     <string name="Enter">Войти</string>
+    <string name="title_activity_notification_settings">Настройка уведомлений</string>
 </resources>

@@ -10,13 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning" >
-        <activity android:name=".EditProfileActivity" >
-        </activity>
-        <activity android:name=".SetNotifActivity" />
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".AboutActivity"></activity>
-        <activity android:name=".OptionNotifyActivity" />
+        <activity
+            android:name=".NotificationSettingsActivity"
+            android:label="@string/title_activity_notification_settings" />
+        <activity android:name=".ProfileEditorActivity"></activity>
+        <activity android:name=".AboutActivity" />
         <activity android:name=".CompanyViewActivity" />
         <activity android:name=".RegistrationCompany" />
         <activity android:name=".RegistrationClient" />

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Основные">
+
+    </PreferenceCategory>
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="all_push_notification_on_off"
+        android:summaryOff="Сейчас, мы не будем беспокоить вас уведомлениями"
+        android:summaryOn="Вам будут приходить пуш уведомления, которые Вы можете настроить ниже"
+        android:title="Присылать любые пуш уведомления" />
+    <PreferenceCategory
+        android:title="Типы уведомлений"
+        android:key="type_of_notif">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="check_box_onChangeStateRequest"
+            android:title="О состоянии записи" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Уведомления на электронную почту">
+
+    </PreferenceCategory>
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="email_notification_on_off"
+        android:summary="Мы будем отправлять уведомления по почте"
+        android:title="Уведомлять по почте" />
+
+    <EditTextPreference
+        android:enabled="false"
+        android:defaultValue="example@mail.ru"
+        android:key="email_for_notification"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="Укажите электронную почту, на которую будут приходить уведомления"
+        android:title="Электронная почта для уведомлений"
+        app:enableCopying="true" />
+</PreferenceScreen>

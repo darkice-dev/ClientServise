@@ -140,6 +140,22 @@
             android:textColor="@color/Black"
             android:textSize="15sp"/>
 
+        <Button
+            android:id="@+id/debug_btn_open_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/debug_btn_edit_profile"
+            android:background="@color/colorWhite"
+            android:onClick="onClickOpenNotificationSettings"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="Окно настроек уведомлений"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp" />
+
     </RelativeLayout>
 
 </LinearLayout>
