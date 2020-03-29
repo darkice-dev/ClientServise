@@ -60,7 +60,7 @@ public class ProfileFragment extends Fragment {
         };
 
         view.findViewById(R.id.debug_btn_edit_profile).setOnClickListener(e -> {
-            startActivity(new Intent(getActivity(), ProfileEditorActivity.class));
+            startActivity(new Intent(getActivity(), EditProfileActivity.class));
         });
 
         //привязываем листенер к кнопке

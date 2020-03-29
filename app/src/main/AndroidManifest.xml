@@ -13,7 +13,9 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".NotificationSettingsActivity"
-            android:label="@string/title_activity_notification_settings" />
+            android:label="@string/title_activity_notification_settings"
+            android:theme="@style/PreferenceScreen"/>
+
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".CompanyViewActivity" />

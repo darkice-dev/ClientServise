@@ -13,4 +13,8 @@
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
+    <style name="PreferenceScreen" parent="AppTheme">
+        <item name="colorAccent">#3F51B5</item>
+    </style>
+
 </resources>
