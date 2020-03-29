@@ -14,7 +14,7 @@
         <activity
             android:name=".NotificationSettingsActivity"
             android:label="@string/title_activity_notification_settings" />
-        <activity android:name=".ProfileEditorActivity"></activity>
+        <activity android:name=".EditProfileActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".CompanyViewActivity" />
         <activity android:name=".RegistrationCompany" />
