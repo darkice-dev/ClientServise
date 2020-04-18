@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/fragment_help"
     android:layout_height="match_parent"
     android:background="@color/Gray"
-    android:orientation="vertical">
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true">
 
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/rl_help"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/btn_record11"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_question"
+        tools:ignore="ScrollViewSize">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:text="Как записаться на услугу?"
-            android:paddingLeft="20dp"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:textAlignment="viewStart"
-            android:textSize="15sp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"/>
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_record11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:text="Как записаться на услугу?"
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textAlignment="viewStart"
+                android:textSize="15sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"/>
 
-        <Button
-            android:id="@+id/btn_record21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:text="Как записаться на услугу?"
-            android:paddingLeft="20dp"
-            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
-            android:textAlignment="viewStart"
-            android:textSize="15sp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:visibility="invisible"/>
-
-        <LinearLayout
-            android:id="@+id/ll_record1"
-            android:layout_below="@+id/btn_record21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_record21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:text="Как записаться на услугу?"
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+                android:textAlignment="viewStart"
+                android:textSize="15sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"
+                android:visibility="invisible"/>
 
             <TextView
                 android:id="@+id/tv_record1"
@@ -51,54 +55,49 @@
                 android:paddingStart="20dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
+                android:layout_below="@+id/btn_record11"
                 android:text="Необходимо зарегистрироваться или войти в аккаунт, на главной странице выбрать категорию услуг, выбрать саму услугу, в списке компаний выбрать подходящую вам, и перейти к оформлению, выбрать нужное время и адрес оказания услуги и нажать кнопку записаться."
                 android:textAlignment="viewStart"
                 android:textColor="@color/DarkDarkGray"
                 android:textSize="14sp"
                 android:lineHeight="25dp"
                 android:visibility="gone" />
-        </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_record12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_below="@+id/ll_record1"
-            android:text="Как редактировать запись? Перенести услугу. Добавить описание и тд."
-            android:paddingLeft="20dp"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"/>
+            <Button
+                android:id="@+id/btn_record12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/tv_record1"
+                android:text="Как редактировать запись? Перенести услугу. Добавить описание и тд."
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"
+                android:textSize="15sp"/>
 
-        <Button
-            android:id="@+id/btn_record22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_below="@+id/ll_record1"
-            android:text="Как редактировать запись? Перенести услугу. Добавить описание и тд."
-            android:paddingLeft="20dp"
-            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"
-            android:visibility="invisible"/>
-
-        <LinearLayout
-            android:id="@+id/ll_record2"
-            android:layout_below="@+id/btn_record22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_record22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/tv_record1"
+                android:text="Как редактировать запись? Перенести услугу. Добавить описание и тд."
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:visibility="invisible"/>
 
             <TextView
                 android:id="@+id/tv_record2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
+                android:layout_below="@id/btn_record22"
                 android:paddingStart="20dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
@@ -108,48 +107,43 @@
                 android:textSize="14sp"
                 android:lineHeight="25dp"
                 android:visibility="gone" />
-        </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_record13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_below="@+id/ll_record2"
-            android:text="Как отменить запись?"
-            android:paddingLeft="20dp"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"/>
 
-        <Button
-            android:id="@+id/btn_record23"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_below="@+id/ll_record2"
-            android:text="Как отменить запись?"
-            android:paddingLeft="20dp"
-            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"
-            android:visibility="invisible"/>
+            <Button
+                android:id="@+id/btn_record13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/tv_record2"
+                android:text="Как отменить запись?"
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"
+                android:textSize="15sp"/>
 
-        <LinearLayout
-            android:id="@+id/ll_record3"
-            android:layout_below="@+id/btn_record23"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_record23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/tv_record2"
+                android:text="Как отменить запись?"
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:visibility="invisible"/>
 
             <TextView
                 android:id="@+id/tv_record3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
+                android:layout_below="@id/btn_record23"
                 android:paddingStart="20dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
@@ -159,48 +153,42 @@
                 android:textSize="14sp"
                 android:lineHeight="25dp"
                 android:visibility="gone" />
-        </LinearLayout>
 
-        <Button
-        android:id="@+id/btn_record14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:layout_below="@+id/ll_record3"
-        android:text="Указанные мной данные не верны, как их изменить?"
-        android:paddingLeft="20dp"
-        android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/Black"
-        android:textSize="15sp"/>
+            <Button
+                android:id="@+id/btn_record14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/tv_record3"
+                android:text="Указанные мной данные не верны, как их изменить?"
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"
+                android:textSize="15sp"/>
 
-        <Button
-            android:id="@+id/btn_record24"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_below="@+id/ll_record3"
-            android:text="Указанные мной данные не верны, как их изменить?"
-            android:paddingLeft="20dp"
-            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"
-            android:visibility="invisible"/>
-
-        <LinearLayout
-            android:id="@+id/ll_record4"
-            android:layout_below="@+id/btn_record24"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_record24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/tv_record3"
+                android:text="Указанные мной данные не верны, как их изменить?"
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:visibility="invisible"/>
 
             <TextView
                 android:id="@+id/tv_record4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
+                android:layout_below="@+id/btn_record24"
                 android:paddingStart="20dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
@@ -210,48 +198,42 @@
                 android:textSize="14sp"
                 android:lineHeight="25dp"
                 android:visibility="gone" />
-        </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_record15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_below="@+id/ll_record4"
-            android:text="Как добавить аватар в приложение?"
-            android:paddingLeft="20dp"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"/>
+            <Button
+                android:id="@+id/btn_record15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/tv_record4"
+                android:text="Как добавить аватар в приложение?"
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"
+                android:textSize="15sp"/>
 
-        <Button
-            android:id="@+id/btn_record25"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:layout_below="@+id/ll_record4"
-            android:text="Как добавить аватар в приложение?"
-            android:paddingLeft="20dp"
-            android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"
-            android:visibility="invisible"/>
-
-        <LinearLayout
-            android:id="@+id/ll_record5"
-            android:layout_below="@+id/btn_record25"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_record25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_below="@+id/tv_record4"
+                android:text="Как добавить аватар в приложение?"
+                android:paddingLeft="20dp"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_down_black_48dp"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                android:visibility="invisible"/>
 
             <TextView
                 android:id="@+id/tv_record5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
+                android:layout_below="@+id/btn_record25"
                 android:paddingStart="20dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
@@ -261,18 +243,31 @@
                 android:textSize="14sp"
                 android:lineHeight="25dp"
                 android:visibility="gone" />
-        </LinearLayout>
 
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_question"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
         <Button
             android:id="@+id/btn_ask_question"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll_record5"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/button_style"
             android:text="Задать вопрос"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="400dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
             android:textColor="@color/colorWhite"
-            android:textStyle="bold" />
-    </RelativeLayout>
-</ScrollView>
+            android:layout_centerVertical="true"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>
