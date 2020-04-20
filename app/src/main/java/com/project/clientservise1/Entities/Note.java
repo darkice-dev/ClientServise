@@ -1,4 +1,4 @@
-package com.project.clientservise1.Entityes;
+package com.project.clientservise1.Entities;
 
 public class Note {
     private String serviceName;

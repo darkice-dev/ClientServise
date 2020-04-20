@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.project.clientservise1.Entityes.Note;
+import com.project.clientservise1.Entities.Note;
 
 import java.util.ArrayList;
 import java.util.List;

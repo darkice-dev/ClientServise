@@ -12,9 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.project.clientservise1.Entityes.Note;
+import com.project.clientservise1.Entities.Note;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.project.clientservise1.MainActivity.notes;
