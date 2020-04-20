@@ -10,8 +10,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.project.clientservise1.Entityes.Note;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static List<Note> notes = new ArrayList<>();
 
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
@@ -70,5 +76,17 @@ public class MainActivity extends AppCompatActivity {
     public void onClickOpenNotificationSettings(View view) {
         Intent intent = new Intent(view.getContext(), NotificationSettingsActivity.class);
         startActivity(intent);
+    }
+
+    public void onClickNoteButton(View view) {
+        view.setEnabled(false);
+        notes.add(new Note("Запись на услугу 1","Описание услуги 1", "100", "30 минут", "15:10"));
+        notes.add(new Note("Запись на услугу 2","Описание услуги 2", "200", "31 минуту", "15:20"));
+        notes.add(new Note("Запись на услугу 3","Описание услуги 3", "300", "32 минуты", "15:30"));
+        notes.add(new Note("Запись на услугу 4","Описание услуги 4", "400", "33 минуты", "15:40"));
+        notes.add(new Note("Запись на услугу 5","Описание услуги 5", "500", "34 минуты", "15:50"));
+        notes.add(new Note("Запись на услугу 6","Описание услуги 6", "600", "35 минут", "16:00"));
+        notes.add(new Note("Запись на услугу 7","Описание услуги 7", "700", "36 минут", "16:10"));
+        notes.add(new Note("Запись на услугу 8","Описание услуги 8", "800", "37 минут", "16:20"));
     }
 }

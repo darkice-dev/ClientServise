@@ -37,7 +37,7 @@ public class ListServiceAdapter extends ArrayAdapter<String> {
             convertView = inflater.inflate(R.layout.list_service, null);
         }
 
-        TextView Service = convertView.findViewById(R.id.tv_service);
+        TextView Service = convertView.findViewById(R.id.tv_service_name);
         TextView Price = convertView.findViewById(R.id.tv_price);
         TextView WorkTime = convertView.findViewById(R.id.tv_workTime);
 
