@@ -154,17 +154,5 @@
             android:textSize="15sp" />
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/b_regCom"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/editText6"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/button_style"
-        android:text="@string/endRegistration"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:textSize="15sp" />
+
 </RelativeLayout>

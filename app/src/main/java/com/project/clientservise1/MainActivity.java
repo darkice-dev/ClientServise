@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.ActionMenuItemView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -29,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+        //TintIcons.tintImageView((inavp) findViewById(R.id.nav_profile), R.color.icon_state_list);
+        //TintIcons.tintImageView((inavn) findViewById(R.id.nav_note), R.color.icon_state_list);
+        //TintIcons.tintImageView((inavh) findViewById(R.id.nav_home), R.color.icon_state_list);
+
 
         getSupportActionBar().hide();
 
@@ -56,10 +65,13 @@ public class MainActivity extends AppCompatActivity {
                     setFragment(profileFragment);
                     return true;
 
-                    default:
-                        return false;
+                default:
+                    return false;
             }
         });
+
+
+
 
         //Spinner spinner = findViewById(R.id.spinnerCategory);
         //ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, category);
@@ -89,4 +101,9 @@ public class MainActivity extends AppCompatActivity {
         notes.add(new Note("Запись на услугу 7","Описание услуги 7", "700", "36 минут", "16:10"));
         notes.add(new Note("Запись на услугу 8","Описание услуги 8", "800", "37 минут", "16:20"));
     }
+
+    //public void onClickOpenNotificationSettings(View view) {
+    //    Intent intent = new Intent(view.getContext(), NotificationSettingsActivity.class);
+    //    startActivity(intent);
+    //}
 }
