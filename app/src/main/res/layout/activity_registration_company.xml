@@ -3,20 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@color/LightGray"
     tools:context=".RegistrationCompany">
 
     <RelativeLayout
+        android:id="@+id/rl_logo1"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/circle">
+    </RelativeLayout>
+    <RelativeLayout
         android:id="@+id/rl_logo"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/colorWhite">
+        android:layout_height="110dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_layout">
 
         <ImageView
             android:id="@+id/im_company"
             android:layout_width="110dp"
             android:layout_height="110dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="50dp"
             android:src="@drawable/start_logo256" />
 
@@ -24,7 +35,7 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_toEndOf="@id/im_company"
             android:layout_marginEnd="30dp"
             android:text="@string/name"
@@ -40,93 +51,105 @@
             android:text="@string/CRM" />
 
     </RelativeLayout>
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="437dp"
+        android:layout_below="@id/rl_logo"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="47dp"
+        android:background="@drawable/circle">
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/login"
-        android:textSize="22sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:inputType="textPersonName"/>
+        android:layout_below="@id/rl_logo"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_layout"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp">
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/e_mail"
-        android:textSize="22sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:inputType="textEmailAddress"/>
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/login"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:inputType="textPersonName"/>
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/name_Company"
-        android:textSize="22sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
-        android:inputType="textLongMessage"/>
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/e_mail"
+            android:layout_below="@id/editText1"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:inputType="textEmailAddress"/>
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/Phone"
-        android:textSize="22sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
-        android:inputType="phone"/>
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_below="@id/editText2"
+            android:hint="@string/name_Company"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:inputType="textLongMessage"/>
 
-    <TextView
-        android:id="@+id/HelpMassage"
-        android:layout_width="365dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="360dp"
-        android:gravity="center"
-        android:textColor="@android:color/holo_red_light"
-        />
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_below="@id/editText3"
+            android:hint="@string/Phone"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:inputType="phone"/>
 
-    <EditText
-        android:id="@+id/PasswordCompany"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="410dp"
-        android:ems="10"
-        android:hint="@string/Password"
-        android:textSize="22sp"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/PasswordCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:layout_below="@id/editText4"
+            android:hint="@string/Password"
+            android:textSize="18sp"
+            android:inputType="textPassword" />
 
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="460dp"
-        android:ems="10"
-        android:hint="@string/confirmPassword"
-        android:textSize="22sp"
-        android:inputType="textPassword"/>
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/PasswordCompany"
+            android:ems="10"
+            android:hint="@string/confirmPassword"
+            android:textSize="18sp"
+            android:inputType="textPassword"/>
 
-    <Button
-        android:id="@+id/b_regCom"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="560dp"
-        android:background="@drawable/button_style"
-        android:text="@string/endRegistration"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold"
-        android:textSize="15sp" />
+        <Button
+            android:id="@+id/b_regCom"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/editText6"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/button_style"
+            android:text="@string/endRegistration"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
 
 </RelativeLayout>

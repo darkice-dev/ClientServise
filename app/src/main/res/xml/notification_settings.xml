@@ -8,8 +8,8 @@
         android:defaultValue="false"
         android:key="all_push_notification_on_off"
         android:summaryOff="Сейчас, мы не будем беспокоить вас уведомлениями"
-        android:summaryOn="Вам будут приходить пуш уведомления, которые Вы можете настроить ниже"
-        android:title="Присылать любые пуш уведомления" />
+        android:summaryOn="Вам будут приходить push-уведомления, которые Вы можете настроить ниже"
+        android:title="Присылать любые push-уведомления" />
     <PreferenceCategory
         android:title="Типы уведомлений"
         android:key="type_of_notif">

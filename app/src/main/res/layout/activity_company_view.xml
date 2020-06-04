@@ -106,6 +106,8 @@
             android:id="@+id/lv_service"
             android:layout_width="match_parent"
             android:layout_height="353dp"
+            android:dividerHeight="8dp"
+            android:divider="@color/LightGray"
             android:layout_below="@+id/tv_service_name"/>
 
         <TextView
@@ -134,10 +136,19 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <ListView
+        <!--<androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lv_master"
             android:layout_width="match_parent"
-            android:layout_height="162dp"
+            android:layout_height="match_parent"
+            android:scrollbars="horizontal"
+            android:layout_below="@+id/tv_master"/>-->
+
+        <ListView
+            android:id="@+id/lv_master"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:dividerHeight="8dp"
+            android:divider="@color/LightGray"
             android:layout_below="@+id/tv_master"/>
 
         <TextView

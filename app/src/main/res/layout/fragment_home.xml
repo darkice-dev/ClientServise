@@ -9,27 +9,46 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/LightGray">
+
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:focusableInTouchMode="true"
+            android:hint="Поиск услуги"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_style"
+            android:inputType="textEmailAddress" />
+
 
         <RelativeLayout
             android:id="@+id/rl_logo"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/inputSearch"
             android:background="@color/colorWhite">
 
             <ImageView
                 android:id="@+id/im_company"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="40dp"
                 android:src="@drawable/start_logo256" />
 
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="35dp"
                 android:layout_toEndOf="@id/im_company"
                 android:layout_marginEnd="30dp"
                 android:text="@string/name"
@@ -50,7 +69,7 @@
             android:id="@+id/layout_spinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"
+            android:background="@color/LightGray"
             android:gravity="center"
             android:layout_below="@id/rl_logo"
             android:orientation="vertical"
@@ -63,16 +82,6 @@
                 android:text="Категории услуг"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite"/>
-
-            <EditText
-                android:id="@+id/inputSearch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:focusableInTouchMode="true"
-                android:hint="Поиск услуги"
-                android:inputType="textEmailAddress" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -80,22 +89,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/layout_spinner"
-            android:background="#FFFFFF"
+            android:background="@color/LightGray"
             android:gravity="center"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:orientation="vertical">
 
             <ListView
                 android:id="@+id/lv_button"
                 android:layout_width="match_parent"
                 android:layout_height="481dp"
-                tools:ignore="NestedScrolling" />
+                android:dividerHeight="8dp"
+                android:divider="@color/LightGray"
+                tools:ignore="NestedScrolling"
+                android:background="@color/colorWhite"/>
             <Button
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:background="@drawable/button_style"
                 android:text="Посмотреть все"
                 android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/colorWhite"/>
 
         </LinearLayout>
