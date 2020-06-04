@@ -15,6 +15,7 @@
         android:layout_marginStart="10dp"
         android:background="@drawable/circle">
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/rl_logo"
         android:layout_width="match_parent"
@@ -51,6 +52,7 @@
             android:text="@string/CRM" />
 
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="437dp"
@@ -60,6 +62,7 @@
         android:layout_marginEnd="47dp"
         android:background="@drawable/circle">
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -139,7 +142,7 @@
         <Button
             android:id="@+id/b_regCom"
             android:layout_width="260dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/editText6"
             android:layout_marginTop="25dp"
@@ -151,5 +154,17 @@
             android:textSize="15sp" />
     </RelativeLayout>
 
-
+    <Button
+        android:id="@+id/b_regCom"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editText6"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_style"
+        android:text="@string/endRegistration"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textSize="15sp" />
 </RelativeLayout>
