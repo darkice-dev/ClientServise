@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="LinearLayoutManager"
-        tools:listitem="@layout/list_service"></androidx.recyclerview.widget.RecyclerView>
+        tools:listitem="@layout/list_service"/>
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView

@@ -35,7 +35,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_below="@id/inputSearch"
-            android:background="@color/colorWhite">
+            android:background="@drawable/circle_layout">
 
             <ImageView
                 android:id="@+id/im_company"

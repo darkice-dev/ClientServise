@@ -3,20 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@color/LightGray"
     tools:context=".RegistrationClient">
+
+    <RelativeLayout
+        android:id="@+id/rl_logo1"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/circle">
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_logo"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/colorWhite">
+        android:layout_height="110dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_layout">
 
         <ImageView
             android:id="@+id/im_company"
             android:layout_width="110dp"
             android:layout_height="110dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="50dp"
             android:src="@drawable/start_logo256" />
 
@@ -24,7 +36,7 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_toEndOf="@id/im_company"
             android:layout_marginEnd="30dp"
             android:text="@string/name"
@@ -41,72 +53,96 @@
 
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="334dp"
+        android:layout_below="@id/rl_logo"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="47dp"
+        android:background="@drawable/circle">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/Name_secName"
-        android:textSize="22sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:inputType="textEmailAddress" />
+        android:layout_below="@id/rl_logo"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_layout"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp">
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
-        android:ems="10"
-        android:textSize="22sp"
-        android:hint="@string/Phone"
-        android:inputType="phone" />
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/Name_secName"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:inputType="textEmailAddress" />
 
-    <TextView
-        android:id="@+id/HelpMassage"
-        android:layout_width="365dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="310dp"
-        android:gravity="center"
-        android:textColor="@android:color/holo_red_light"
-        />
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/editText1"
+            android:ems="10"
+            android:textSize="18sp"
+            android:hint="@string/Phone"
+            android:inputType="phone" />
 
-    <EditText
-        android:id="@+id/PasswordClient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="360dp"
-        android:ems="10"
-        android:textSize="22sp"
-        android:hint="@string/Password"
-        android:inputType="textPassword" />
+        <TextView
+            android:id="@+id/HelpMassage"
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/editText2"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_light"
+            />
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="410dp"
-        android:ems="10"
-        android:textSize="22sp"
-        android:hint="@string/confirmPassword"
+        <EditText
+            android:id="@+id/PasswordClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/HelpMassage"
+            android:ems="10"
+            android:textSize="18sp"
+            android:hint="@string/Password"
+            android:inputType="textPassword" />
 
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/PasswordClient"
+            android:ems="10"
+            android:textSize="18sp"
+            android:hint="@string/confirmPassword"
+            android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/b_reg"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="510dp"
-        android:text="@string/endRegistration"
-        android:background="@drawable/button_style"
-        android:textStyle="bold"
-        android:textColor="@color/colorWhite"
-        android:textSize="15sp" />
+        <Button
+            android:id="@+id/b_reg"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/editText4"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/endRegistration"
+            android:background="@drawable/button_style"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
 
+    </RelativeLayout>
 
 </RelativeLayout>

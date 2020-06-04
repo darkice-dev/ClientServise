@@ -55,7 +55,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="437dp"
+        android:layout_height="430dp"
         android:layout_below="@id/rl_logo"
         android:layout_marginTop="15dp"
         android:layout_marginStart="55dp"
@@ -116,14 +116,25 @@
             android:layout_centerHorizontal="true"
             android:inputType="phone"/>
 
+        <TextView
+            android:id="@+id/HelpMassage"
+            android:layout_width="365dp"
+            android:layout_below="@id/editText4"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_light"
+            />
+
         <EditText
             android:id="@+id/PasswordCompany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="15dp"
             android:layout_centerHorizontal="true"
             android:ems="10"
-            android:layout_below="@id/editText4"
+            android:layout_below="@id/HelpMassage"
             android:hint="@string/Password"
             android:textSize="18sp"
             android:inputType="textPassword" />
@@ -153,6 +164,5 @@
             android:textStyle="bold"
             android:textSize="15sp" />
     </RelativeLayout>
-
 
 </RelativeLayout>

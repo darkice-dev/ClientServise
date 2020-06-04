@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:id="@+id/fragment_help"
     android:layout_height="match_parent"
-    android:background="@color/Gray"
+    android:background="@color/LightGray"
     android:layout_centerVertical="true"
     android:layout_centerHorizontal="true">
 
