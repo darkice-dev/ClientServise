@@ -14,12 +14,11 @@
         <RelativeLayout
             android:id="@+id/rl_logo1"
             android:layout_width="match_parent"
-            android:layout_height="115dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/circle">
-        </RelativeLayout>
+            android:background="@drawable/circle" />
 
         <RelativeLayout
             android:id="@+id/rl_logo"
@@ -35,6 +34,8 @@
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
                 android:src="@drawable/start_logo256" />
 
             <TextView
@@ -59,13 +60,12 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="332dp"
+            android:layout_height="300dp"
             android:layout_below="@id/rl_logo"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="15dp"
-            android:layout_marginStart="55dp"
             android:layout_marginEnd="47dp"
-            android:background="@drawable/circle">
-        </RelativeLayout>
+            android:background="@drawable/circle" />
 
         <RelativeLayout
             android:id="@+id/info"
@@ -165,6 +165,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_devs5"
                 android:layout_marginTop="20dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/supportEmailAddress"
                 android:textAlignment="center"

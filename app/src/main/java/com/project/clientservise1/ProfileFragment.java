@@ -23,6 +23,7 @@ public class ProfileFragment extends Fragment {
     private Button btnEnter;
     private Button btnRegistration;
     private Button btnHelp;
+    private Button btnSettings;
     private Button btnAbout;
 
 
@@ -35,6 +36,7 @@ public class ProfileFragment extends Fragment {
         btnEnter = view.findViewById(R.id.btn_enter);
         btnRegistration = view.findViewById(R.id.btn_registration);
         btnHelp = view.findViewById(R.id.btn_help);
+        btnSettings = view.findViewById(R.id.btn_settings);
         btnAbout = view.findViewById(R.id.btn_about);
         //HelpFragment fragmentHelp = new HelpFragment();
 
@@ -67,6 +69,9 @@ public class ProfileFragment extends Fragment {
         btnEnter.setOnClickListener(onClickBtnOk);
         btnRegistration.setOnClickListener(onClickBtnReg);
         btnHelp.setOnClickListener(onClickBtnHelp);
+//        btnSettings.setOnClickListener(l -> {
+//
+//        });
         btnAbout.setOnClickListener(onClickBtnAbout);
 
         return view;

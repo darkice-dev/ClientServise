@@ -30,9 +30,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (false){ // type "true" to turn on dark theme
+            setTheme(R.style.AppThemeDark);
+        }
+
         setContentView(R.layout.activity_main);
-
-
 
         //TintIcons.tintImageView((inavp) findViewById(R.id.nav_profile), R.color.icon_state_list);
         //TintIcons.tintImageView((inavn) findViewById(R.id.nav_note), R.color.icon_state_list);

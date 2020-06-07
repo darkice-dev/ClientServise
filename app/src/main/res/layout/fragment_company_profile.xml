@@ -160,10 +160,26 @@
             android:textSize="15sp"/>
 
         <Button
-            android:id="@+id/btn_about"
+            android:id="@+id/btn_settings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_help"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="Настройки"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_settings"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
             android:text="О приложении"

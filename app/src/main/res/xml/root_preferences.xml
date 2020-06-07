@@ -1,0 +1,12 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Настройки интерфейса">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_change_theme"
+            android:key="dark_theme"
+            android:summary="Тема измениться после перезапуска приложения"
+            android:title="Тёмная тема" />
+    </PreferenceCategory>
+</PreferenceScreen>
