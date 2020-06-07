@@ -13,6 +13,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false)) {
             this.setTheme(R.style.AppThemeDark);
         } else {

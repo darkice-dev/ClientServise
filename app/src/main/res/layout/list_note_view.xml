@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Услуга"
-        android:textColor="@color/Black"
         android:textSize="17sp"
         android:textStyle="bold" />
 
@@ -20,7 +19,6 @@
         android:layout_toRightOf="@id/tv_service_name"
         android:text="Время"
         android:textSize="17sp"
-        android:textStyle="bold"
-        android:textColor="@color/Black" />
+        android:textStyle="bold"/>
 
 </RelativeLayout>

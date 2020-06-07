@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EditProfileActivity"
-    android:background="@color/LightGray">
+    tools:context=".EditProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,6 +23,7 @@
 
             <ImageView
                 android:id="@+id/imageViewAvatar"
+                android:background="#00000000"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/blank_avatar_white_512_2" />
@@ -36,6 +36,7 @@
                 android:background="@drawable/button_style_white"
                 android:paddingHorizontal="15dp"
                 android:textSize="15sp"
+                android:textColor="@color/colorPrimary"
                 android:text="Изменить аватар" />
 
         </LinearLayout>
@@ -75,6 +76,7 @@
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
+            android:background="#00000000"
             android:layout_height="wrap_content"
             android:text="Имя"
             android:layout_marginStart="20dp"
@@ -95,6 +97,7 @@
 
         <TextView
             android:id="@+id/tv_surname"
+            android:background="#00000000"
             android:layout_below="@+id/editTextProfileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -130,6 +133,7 @@
 
         <TextView
             android:id="@+id/tv_login"
+            android:background="#00000000"
             android:layout_below="@+id/editTextProfileSurName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -152,6 +156,7 @@
 
         <TextView
             android:id="@+id/tv_email"
+            android:background="#00000000"
             android:layout_below="@+id/editTextProfileLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

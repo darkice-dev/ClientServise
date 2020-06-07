@@ -1,81 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     android:id="@+id/fragment_about"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/LightGray"
     android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:id="@+id/rl_logo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_layout">
 
-        <RelativeLayout
-            android:id="@+id/rl_logo1"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/circle" />
-
-        <RelativeLayout
-            android:id="@+id/rl_logo"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
+        <ImageView
+            android:id="@+id/im_company"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="3dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/circle_layout">
+            android:layout_marginBottom="3dp"
+            android:background="#00000000"
+            android:src="@drawable/start_logo256" />
 
-            <ImageView
-                android:id="@+id/im_company"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:src="@drawable/start_logo256" />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@id/im_company"
+            android:background="#00000000"
+            android:text="@string/name"
+            android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_toEndOf="@id/im_company"
-                android:layout_marginEnd="30dp"
-                android:text="@string/name"
-                android:textSize="18sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_name"
-                android:layout_marginEnd="30dp"
-                android:layout_marginTop="0dp"
-                android:textSize="13sp"
-                android:layout_toEndOf="@id/im_company"
-                android:text="@string/CRM" />
-        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@id/im_company"
+            android:background="#00000000"
+            android:text="@string/CRM"
+            android:textSize="10sp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_below="@id/rl_logo"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="47dp"
-            android:background="@drawable/circle" />
+    </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/info"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/rl_logo"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/circle_layout"
             android:layout_marginStart="55dp"
-            android:layout_marginEnd="55dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="55dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_layout">
 
             <TextView
                 android:id="@+id/tv_version"
@@ -83,6 +71,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:background="#00000000"
                 android:text="Версия приложения:"
                 android:textAlignment="center"
                 android:textSize="20sp" />
@@ -91,9 +80,10 @@
                 android:id="@+id/tv_version2"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_toEndOf="@id/tv_version"
+                android:background="#00000000"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -101,62 +91,68 @@
                 android:id="@+id/tv_devs"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
-                android:layout_marginTop="50dp"
                 android:layout_below="@id/tv_version"
                 android:layout_marginStart="20dp"
-                android:textSize="20sp"
+                android:layout_marginTop="50dp"
+                android:background="#00000000"
                 android:text="Разработчики приложения:"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tv_devs1"
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
-                android:layout_marginStart="20dp"
-                android:textSize="18sp"
                 android:layout_below="@+id/tv_devs"
+                android:layout_marginStart="20dp"
+                android:background="#00000000"
                 android:text="Филиппова А.А."
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_devs2"
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
-                android:layout_marginStart="20dp"
-                android:textSize="18sp"
                 android:layout_below="@+id/tv_devs1"
+                android:layout_marginStart="20dp"
+                android:background="#00000000"
                 android:text="Глебов Е.П."
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_devs3"
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
-                android:layout_marginStart="20dp"
-                android:textSize="18sp"
                 android:layout_below="@+id/tv_devs2"
+                android:layout_marginStart="20dp"
+                android:background="#00000000"
                 android:text="Козуб С.И."
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_devs4"
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
-                android:layout_marginStart="20dp"
-                android:textSize="18sp"
                 android:layout_below="@+id/tv_devs3"
+                android:layout_marginStart="20dp"
+                android:background="#00000000"
                 android:text="Николаенко Д.М."
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_devs5"
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
-                android:layout_marginStart="20dp"
-                android:textSize="18sp"
                 android:layout_below="@+id/tv_devs4"
+                android:layout_marginStart="20dp"
+                android:background="#00000000"
                 android:text="Василенко А.А."
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="18sp" />
 
 
             <TextView
@@ -164,14 +160,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_devs5"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="1dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="20dp"
+                android:background="#00000000"
                 android:text="@string/supportEmailAddress"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
         </RelativeLayout>
-    </RelativeLayout>
-</ScrollView>
+</RelativeLayout>

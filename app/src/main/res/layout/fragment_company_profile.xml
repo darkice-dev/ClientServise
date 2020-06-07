@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@color/LightGray">
+
         <LinearLayout
             android:id="@+id/headerLayout"
             android:layout_width="match_parent"
@@ -22,13 +23,14 @@
                 android:id="@+id/imageViewAvatar"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/blank_avatar_white_512_2"
-                />
+                android:background="#00000000"
+                android:src="@drawable/blank_avatar_white_512_2" />
 
             <TextView
                 android:id="@+id/txtUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#00000000"
                 android:gravity="center"
                 android:text="Компания"
                 android:textColor="@color/colorWhite"
@@ -38,6 +40,7 @@
                 android:id="@+id/txtUserPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#00000000"
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:text="company@mail.com"
@@ -45,167 +48,167 @@
                 android:textSize="15sp" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_memo"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/headerLayout"
-            android:background="@color/LightGray"
-            android:paddingBottom="5dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingStart="15dp"
-            android:text="Уведомления"
-            android:textAlignment="inherit"
-            android:textColor="@color/DarkGray"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:layout_below="@+id/headerLayout">
 
-        <Switch
-            android:id="@+id/sw_memo"
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:layout_below="@+id/tv_memo"
-            android:background="@color/colorWhite"
-            android:checked="true"
-            android:paddingStart="15dp"
-            android:paddingEnd="10dp"
-            android:text="Уведомления"
-            android:textColor="@color/Black"
-            android:textSize="15sp"
-            android:thumbTint="@color/colorPrimary"
-            android:trackTint="@color/design_default_color_primary_dark" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_option_memo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/sw_memo"
-            android:background="@color/colorWhite"
-            android:onClick="onClickOpenNotificationSettings"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="10dp"
-            android:layout_marginTop="5dp"
-            android:text="Настройка уведомлений"
-            android:textAlignment="viewStart"
-            android:textSize="15sp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black" />
+                <TextView
+                    android:id="@+id/tv_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20000000"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Уведомления"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_another"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_option_memo"
-            android:background="@color/LightGray"
-            android:text="Другое"
-            android:paddingBottom="5dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingStart="15dp"
-            android:textAlignment="inherit"
-            android:textColor="@color/DarkGray"
-            android:textSize="15sp"
-            android:textStyle="bold"/>
+                <Switch
+                    android:id="@+id/sw_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="#20000000"
+                    android:checked="true"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="Уведомления"
+                    android:textSize="15sp"/>
 
-        <Button
-            android:id="@+id/btn_red_profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_another"
-            android:background="@color/colorWhite"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="Профиль"
-            android:paddingStart="15sp"
-            android:paddingEnd="10dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"/>
+                <Button
+                    android:id="@+id/btn_option_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20000000"
+                    android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="Настройка уведомлений"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/btn_employee"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_red_profile"
-            android:background="@color/colorWhite"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="Сотрудники"
-            android:paddingStart="15dp"
-            android:paddingEnd="10dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20000000"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="Компания"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
+                <Button
+                    android:id="@+id/btn_red_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20000000"
+                    android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                    android:paddingStart="15sp"
+                    android:paddingEnd="10dp"
+                    android:text="Профиль"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="15sp" />
 
+                <Button
+                    android:id="@+id/btn_employee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20000000"
+                    android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="Сотрудники"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/btn_help"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_employee"
-            android:background="@color/colorWhite"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="Помощь"
-            android:paddingEnd="10dp"
-            android:paddingStart="15dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_another"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20000000"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="Другое"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btn_settings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_help"
-            android:layout_marginBottom="5dp"
-            android:background="@color/colorWhite"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="10dp"
-            android:text="Настройки"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp" />
+                <Button
+                    android:id="@+id/btn_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20000000"
+                    android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="Настройки"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/btn_about"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_settings"
-            android:background="@color/colorWhite"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="О приложении"
-            android:paddingStart="15dp"
-            android:paddingEnd="10dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
-            android:textSize="15sp"/>
+                <Button
+                    android:id="@+id/btn_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20000000"
+                    android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="Помощь"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/btn_enter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_about"
-            android:background="@color/colorWhite"
-            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
-            android:text="Выйти"
-            android:paddingEnd="10dp"
-            android:paddingStart="15dp"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/RED"
-            android:textSize="15sp"/>
+                <Button
+                    android:id="@+id/btn_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20000000"
+                    android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="О приложении"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_enter"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#30FF0000"
+                    android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="Выйти"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </ScrollView>
+
 
     </RelativeLayout>
 

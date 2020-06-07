@@ -3,10 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layout_marginBottom="5dp"
     android:padding="10dp"
     android:paddingTop="20dp"
     android:paddingStart="30dp"
-    android:paddingEnd="30dp">
+    android:paddingEnd="30dp"
+    android:background="@drawable/circle">
 
     <TextView
         android:id="@+id/tv_service_name"
@@ -14,7 +16,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="13px"
         android:text="Наименование услуги"
-        android:textColor="@color/Black"
         android:textSize="16sp"
         android:textStyle="bold" />
 

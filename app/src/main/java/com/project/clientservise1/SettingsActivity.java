@@ -14,13 +14,13 @@ public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
         if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false)) {
             this.setTheme(R.style.AppThemeDark);
         } else {
             this.setTheme(R.style.AppTheme);
         }
+
+        super.onCreate(savedInstanceState);
 
         setContentView(R.layout.settings_activity);
         getSupportFragmentManager()
@@ -56,8 +56,4 @@ public class SettingsActivity extends AppCompatActivity {
             }
         }
     }
-}
-
-interface OnChangeThemeListener{
-    void changedTheme();
 }

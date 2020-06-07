@@ -12,9 +12,9 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false)) {
-            this.setTheme(R.style.AppTheme);
-        } else {
             this.setTheme(R.style.AppThemeDark);
+        } else {
+            this.setTheme(R.style.AppTheme);
         }
 
         super.onCreate(savedInstanceState);
@@ -24,7 +24,7 @@ public class AboutActivity extends AppCompatActivity {
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("О приложении");
-        TextView tv_version2 = (TextView) findViewById(R.id.tv_version2);
+        TextView tv_version2 = findViewById(R.id.tv_version2);
         tv_version2.setText(BuildConfig.VERSION_NAME);
 
     }

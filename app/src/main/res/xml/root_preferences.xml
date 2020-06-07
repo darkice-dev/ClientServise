@@ -6,7 +6,7 @@
             android:defaultValue="false"
             android:icon="@drawable/ic_change_theme"
             android:key="dark_theme"
-            android:summary="Тема измениться после перезапуска приложения"
+            android:summary="Более тёмная цветовая палитра"
             android:title="Тёмная тема" />
     </PreferenceCategory>
 </PreferenceScreen>

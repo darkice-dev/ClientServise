@@ -90,11 +90,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    public void onClickOpenNotificationSettings(View view) {
-        Intent intent = new Intent(view.getContext(), NotificationSettingsActivity.class);
-        startActivity(intent);
-    }
-
     public void onClickNoteButton(View view) {
         view.setEnabled(false);
         notes.add(new Note("Запись на услугу 1","Описание услуги 1", "100", "30 минут", "15:10"));
@@ -111,8 +106,8 @@ public class MainActivity extends AppCompatActivity {
         setFragment(new CompanyProfileFragment());
     }
 
-    //public void onClickOpenNotificationSettings(View view) {
-    //    Intent intent = new Intent(view.getContext(), NotificationSettingsActivity.class);
-    //    startActivity(intent);
-    //}
+    public void onClickOpenNotificationSettings(View view) {
+        Intent intent = new Intent(view.getContext(), NotificationSettingsActivity.class);
+        startActivity(intent);
+    }
 }
