@@ -166,7 +166,7 @@
                 android:layout_below="@id/tv_devs5"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Email для связи: example@example.ru"
+                android:text="@string/supportEmailAddress"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 

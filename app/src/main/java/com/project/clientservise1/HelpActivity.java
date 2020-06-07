@@ -2,16 +2,14 @@ package com.project.clientservise1;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NavUtils;
 
 import android.content.Intent;
-import android.opengl.Visibility;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HelpActivity extends AppCompatActivity {
 
@@ -28,6 +26,19 @@ public class HelpActivity extends AppCompatActivity {
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("Помощь");
+
+        Button btn_ask_question = findViewById(R.id.btn_ask_question);
+        btn_ask_question.setOnClickListener(v -> {
+            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            emailIntent.setData(Uri.parse("mailto:"));
+            emailIntent.setType("text/plain");
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, getString(R.string.supportEmailAddress));
+            try {
+                startActivity(emailIntent);
+            } catch (android.content.ActivityNotFoundException e){
+                Toast.makeText(this, "Почтовый клиент не установлен на вашем телефоне :(", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         Button btnRecord11 = findViewById(R.id.btn_record11);
         Button btnRecord21 = findViewById(R.id.btn_record21);
