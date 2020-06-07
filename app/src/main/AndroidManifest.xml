@@ -12,10 +12,12 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+        <activity
             android:name=".NotificationSettingsActivity"
             android:label="@string/title_activity_notification_settings"
-            android:theme="@style/PreferenceScreen"/>
-
+            android:theme="@style/PreferenceScreen" />
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".CompanyViewActivity" />

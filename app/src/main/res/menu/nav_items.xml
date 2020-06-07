@@ -5,17 +5,14 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/baseline_home_grey_48mdp"
-
         android:title="@string/nav_home" />
     <item
         android:id="@+id/nav_note"
         android:icon="@drawable/baseline_assignment_grey_48mdp"
-
         android:title="@string/nav_note"
         />
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/blank_avatar_grey_512_2"
-
         android:title="@string/nav_profile" />
 </menu>

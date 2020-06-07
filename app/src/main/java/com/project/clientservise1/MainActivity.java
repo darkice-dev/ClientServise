@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.ActionMenuItemView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.preference.PreferenceManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.project.clientservise1.Entities.Note;
@@ -29,10 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false)) {
+            this.setTheme(R.style.AppThemeDark);
+        } else {
+            this.setTheme(R.style.AppTheme);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         //TintIcons.tintImageView((inavp) findViewById(R.id.nav_profile), R.color.icon_state_list);
         //TintIcons.tintImageView((inavn) findViewById(R.id.nav_note), R.color.icon_state_list);
@@ -85,11 +90,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    public void onClickOpenNotificationSettings(View view) {
-        Intent intent = new Intent(view.getContext(), NotificationSettingsActivity.class);
-        startActivity(intent);
-    }
-
     public void onClickNoteButton(View view) {
         view.setEnabled(false);
         notes.add(new Note("Запись на услугу 1","Описание услуги 1", "100", "30 минут", "15:10"));
@@ -102,8 +102,12 @@ public class MainActivity extends AppCompatActivity {
         notes.add(new Note("Запись на услугу 8","Описание услуги 8", "800", "37 минут", "16:20"));
     }
 
-    //public void onClickOpenNotificationSettings(View view) {
-    //    Intent intent = new Intent(view.getContext(), NotificationSettingsActivity.class);
-    //    startActivity(intent);
-    //}
+    public void onClickOpenCompanyProfile(View view) {
+        setFragment(new CompanyProfileFragment());
+    }
+
+    public void onClickOpenNotificationSettings(View view) {
+        Intent intent = new Intent(view.getContext(), NotificationSettingsActivity.class);
+        startActivity(intent);
+    }
 }

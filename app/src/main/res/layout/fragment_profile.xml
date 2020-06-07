@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@color/LightGray">
+        android:background="#00000000">
 
         <LinearLayout
             android:id="@+id/headerLayout"
@@ -23,25 +23,28 @@
                 android:id="@+id/imageViewAvatar"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:background="@drawable/button_style"
                 android:src="@drawable/blank_avatar_white_512_2" />
 
             <TextView
                 android:id="@+id/txtUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/LightGray"
                 android:gravity="center"
                 android:text="Гость"
-                android:textColor="@color/colorWhite"
                 android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/txtUserPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/LightGray"
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:text="guest@mail.com"
-                android:textColor="@color/colorWhite"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -50,16 +53,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/headerLayout"
+            android:background="#20000000"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
             android:text="Помощь"
             android:paddingStart="15dp"
             android:paddingEnd="10dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
             android:textSize="15sp"/>
 
         <Button
@@ -67,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_help"
-            android:background="@color/colorWhite"
+            android:background="#20000000"
             android:layout_marginBottom="5dp"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
             android:text="О приложении"
@@ -75,7 +77,6 @@
             android:paddingEnd="10dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
             android:textSize="15sp"/>
 
         <Button
@@ -83,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_about"
-            android:background="@color/colorWhite"
+            android:background="#20000000"
             android:layout_marginBottom="5dp"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
             android:text="Зарегистрироваться"
@@ -91,7 +92,6 @@
             android:paddingEnd="10dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/RED"
             android:textSize="15sp"/>
 
         <Button
@@ -99,26 +99,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_registration"
-            android:background="@color/colorWhite"
+            android:background="#20000000"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
             android:text="Войти"
             android:paddingStart="15dp"
             android:paddingEnd="10dp"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/RED"
             android:textSize="15sp"/>
 
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/labelDebug"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_enter"
-            android:background="@color/LightGray"
             android:paddingStart="15dp"
             android:paddingEnd="10dp"
             android:paddingTop="10dp"
             android:paddingBottom="5dp"
+            android:background="#1D000000"
             android:text="Debug"
             android:textAlignment="inherit"
             android:textColor="@color/DarkGray"
@@ -130,30 +130,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/labelDebug"
-            android:background="@color/colorWhite"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
             android:paddingStart="15dp"
             android:paddingEnd="10dp"
             android:text="Окно редактирования профиля Клиента"
+            android:background="#20000000"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
             android:textSize="15sp"/>
 
         <Button
-            android:id="@+id/debug_btn_open_settings"
+            android:id="@+id/debug_btn_open_settings2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#20000000"
             android:layout_below="@+id/debug_btn_edit_profile"
-            android:background="@color/colorWhite"
-            android:onClick="onClickOpenNotificationSettings"
             android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:onClick="onClickOpenCompanyProfile"
             android:paddingStart="15dp"
             android:paddingEnd="10dp"
-            android:text="Окно настроек уведомлений"
+            android:text="Окно профиля компании"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/Black"
             android:textSize="15sp" />
 
     </RelativeLayout>

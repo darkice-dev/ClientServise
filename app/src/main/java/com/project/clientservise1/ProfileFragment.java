@@ -3,6 +3,7 @@ package com.project.clientservise1;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -24,7 +25,6 @@ public class ProfileFragment extends Fragment {
     private Button btnRegistration;
     private Button btnHelp;
     private Button btnAbout;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,6 +67,7 @@ public class ProfileFragment extends Fragment {
         btnEnter.setOnClickListener(onClickBtnOk);
         btnRegistration.setOnClickListener(onClickBtnReg);
         btnHelp.setOnClickListener(onClickBtnHelp);
+
         btnAbout.setOnClickListener(onClickBtnAbout);
 
         return view;
