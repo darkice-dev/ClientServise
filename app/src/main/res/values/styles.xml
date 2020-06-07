@@ -14,11 +14,9 @@
         <item name="colorPrimary">@color/colorPrimaryDarkTheme</item>
         <item name="colorPrimaryDark">@color/colorPrimaryLightDarkTheme</item>
         <item name="colorAccent">@color/colorAccentDarkTheme</item>
-        <item name="android:background">@color/colorPrimaryDarkTheme</item>
-        <item name="android:startColor">@color/DarkDarkGray</item>
+        <item name="android:background">@color/DarkDarkGray</item>
         <item name="android:divider">@color/DarkDarkGray</item>
         <item name="android:color">@color/DarkDarkGray</item>
-        <item name="itemBackground">@color/DarkDarkGray</item>
 
     </style>
 

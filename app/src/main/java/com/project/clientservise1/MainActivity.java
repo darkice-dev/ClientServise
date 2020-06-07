@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.ActionMenuItemView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.preference.PreferenceManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.project.clientservise1.Entities.Note;
@@ -29,12 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (false){ // type "true" to turn on dark theme
-            setTheme(R.style.AppThemeDark);
+        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false)) {
+            this.setTheme(R.style.AppThemeDark);
+        } else {
+            this.setTheme(R.style.AppTheme);
         }
 
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //TintIcons.tintImageView((inavp) findViewById(R.id.nav_profile), R.color.icon_state_list);
@@ -103,6 +105,10 @@ public class MainActivity extends AppCompatActivity {
         notes.add(new Note("Запись на услугу 6","Описание услуги 6", "600", "35 минут", "16:00"));
         notes.add(new Note("Запись на услугу 7","Описание услуги 7", "700", "36 минут", "16:10"));
         notes.add(new Note("Запись на услугу 8","Описание услуги 8", "800", "37 минут", "16:20"));
+    }
+
+    public void onClickOpenCompanyProfile(View view) {
+        setFragment(new CompanyProfileFragment());
     }
 
     //public void onClickOpenNotificationSettings(View view) {

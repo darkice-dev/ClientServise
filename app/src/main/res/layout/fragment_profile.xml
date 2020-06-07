@@ -156,6 +156,22 @@
             android:textColor="@color/Black"
             android:textSize="15sp" />
 
+        <Button
+            android:id="@+id/debug_btn_open_settings2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/debug_btn_open_settings"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/round_keyboard_arrow_right_black_48dp"
+            android:onClick="onClickOpenCompanyProfile"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:text="Окно профиля компании"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            android:textSize="15sp" />
+
     </RelativeLayout>
 
 </LinearLayout>

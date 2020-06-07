@@ -2,6 +2,7 @@ package com.project.clientservise1;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -19,6 +20,12 @@ public class HelpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("dark_theme", false)) {
+            this.setTheme(R.style.AppThemeDark);
+        } else {
+            this.setTheme(R.style.AppTheme);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
